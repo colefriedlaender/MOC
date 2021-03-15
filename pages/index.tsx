@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Button from "../components/button/Button";
+import Greeting from "../components/Greeting/Greeting";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <Button primary label="Primary" />
         <Button primary={false} label="Secondary" />
       </main>
+      <Greeting name="Cole" />
     </div>
   );
 }
