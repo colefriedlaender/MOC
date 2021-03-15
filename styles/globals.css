@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+:root {
+  --main-color: #4067a1;
+  --secundary-color: #a2b2c9;
+  --primary-color: #0000;
+  --background-color: #f5f8ff;
+  --text-button-color: #ffff;
+}
