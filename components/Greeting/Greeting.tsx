@@ -1,15 +1,19 @@
-import "./Greeting.module.css";
+import styles from "../Greeting/Greeting.module.css";
 export type Name = {
   name: string;
 };
 
 function Button({ name }: Name) {
   return (
-    <div className="grettingContainer">
-      <div className="header">
-        Hello,<span className="name">{name}</span>
+    <div className={styles.grettingContainer}>
+      <div className={styles.header}>
+        Hello,<span className={styles.name}>{name}</span>
       </div>
-      <img src="/material-settings.svg" alt="" className="settingsImage" />
+      <img
+        src="/material-settings.svg"
+        alt=""
+        className={styles.settingsImage}
+      />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import "./Stock.module.css";
+import styles from "../StockBlock/Stock.module.css";
 export type StockProps = {
   stockName: string;
   rate: string;
@@ -9,13 +9,13 @@ export type StockProps = {
 
 function Stock({ amount, price, rate, stockName, total }: StockProps) {
   return (
-    <div className="stockContainer">
-      <div className="stockName">{stockName}</div>
-      <div className="rate">{rate}%</div>
-      <div className="amount">
+    <div className={styles.stockContainer}>
+      <div className={styles.stockName}>{stockName}</div>
+      <div className={styles.rate}>{rate}%</div>
+      <div className={styles.amount}>
         {amount} x ${price}
       </div>
-      <div className="total">${total}</div>
+      <div className={styles.total}>${total}</div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import "./Performance.module.css";
+import styles from "../PerformanceBlock/Performance.module.css";
 export type PerformanceProps = {
   head: string;
   performanceText: string;
@@ -11,11 +11,11 @@ function Performance({
   performanceText,
 }: PerformanceProps) {
   return (
-    <div className="performanceContainer">
-      <div className="head">{head}</div>
-      <div className="performance">
+    <div className={styles.performanceContainer}>
+      <div className={styles.head}>{head}</div>
+      <div className={styles.performance}>
         {performanceText}
-        <span className="performanceRate"> {performanceRate}%</span>
+        <span className={styles.performanceRate}> {performanceRate}%</span>
       </div>
     </div>
   );

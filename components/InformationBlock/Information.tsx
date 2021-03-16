@@ -1,4 +1,4 @@
-import "./Information.module.css";
+import styles from "../InformationBlock/Information.module.css";
 export type InformationProps = {
   firstWord: string;
   secondWord: string;
@@ -7,12 +7,12 @@ export type InformationProps = {
 
 function Information({ firstWord, secondWord, information }: InformationProps) {
   return (
-    <div className="informationContainer">
-      <div className="firstWord">
+    <div className={styles.informationContainer}>
+      <div className={styles.firstWord}>
         {firstWord}
-        <span className="secondWord">{secondWord}</span>
+        <span className={styles.secondWord}>{secondWord}</span>
       </div>
-      <div className="information">{information}</div>
+      <div className={styles.information}>{information}</div>
     </div>
   );
 }

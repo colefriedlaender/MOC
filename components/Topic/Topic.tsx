@@ -1,12 +1,12 @@
-import "./Topic.module.css";
+import styles from "../Topic/Topic.module.css";
 export type TopicProps = {
   topic: string;
 };
 
 function Topic({ topic }: TopicProps) {
   return (
-    <div className="topicContainer">
-      <div className="topic">{topic}</div>
+    <div className={styles.topicContainer}>
+      <div className={styles.topic}>{topic}</div>
     </div>
   );
 }
