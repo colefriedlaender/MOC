@@ -1,0 +1,26 @@
+.performanceContainer {
+  background-color: var(--text-button-color);
+  width: 350px;
+  height: 107px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0 2px 5px;
+}
+.head {
+  padding-top: 10px;
+  text-align: center;
+}
+.performance {
+  color: var(--main-color);
+  font-size: 15px;
+  text-align: center;
+}
+.performanceRate {
+  font-size: 15px;
+  color: var(--positive-color);
+  align-self: start;
+  justify-self: center;
+}
