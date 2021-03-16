@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Button from "../components/button/Button";
 import Greeting from "../components/Greeting/Greeting";
 import styles from "../styles/Home.module.css";
 
