@@ -1,0 +1,28 @@
+.container {
+  background-color: var(--text-button-color);
+  height: 70px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: 60% 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 0 2px 5px;
+}
+.stockName {
+  align-self: center;
+}
+.stockRate {
+  align-self: center;
+  justify-self: end;
+  color: var(--positive-color);
+}
+.amount {
+  font-size: 15px;
+  color: var(--secundary-color);
+}
+.total {
+  font-size: 15px;
+  justify-self: end;
+  color: var(--secundary-color);
+}
