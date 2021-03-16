@@ -1,0 +1,22 @@
+.navbarContainer {
+  background-color: var(--main-color);
+  width: 375px;
+  height: 55px;
+  border-radius: 25px 25px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.addImage {
+  justify-self: center;
+  align-self: center;
+}
+.homeImage {
+  justify-self: center;
+  align-self: center;
+}
+.peopleImage {
+  justify-self: center;
+  align-self: center;
+}
