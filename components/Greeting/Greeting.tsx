@@ -5,8 +5,11 @@ export type Name = {
 
 function Button({ name }: Name) {
   return (
-    <div className="header">
-      Hello,<span className="name">{name}</span>
+    <div className="grettingContainer">
+      <div className="header">
+        Hello,<span className="name">{name}</span>
+      </div>
+      <img src="/material-settings.svg" alt="" className="settingsImage" />
     </div>
   );
 }

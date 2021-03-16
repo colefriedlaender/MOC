@@ -1,7 +1,23 @@
+.grettingContainer {
+  border: 2px solid black;
+  width: 350px;
+  height: 70px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  color: var(--main-color);
+  padding-right: 25px;
+  padding-left: 25px;
+  align-content: center;
+}
 .header {
   color: var(--main-color);
 }
 .name {
   display: block;
   font-weight: bold;
+}
+.settingsImage {
+  align-self: center;
+  justify-self: end;
 }
