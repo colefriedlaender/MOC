@@ -5,17 +5,17 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <Button primary label="Primary" />
-        <Button primary={false} label="Secondary" />
-      </main>
-      <Greeting name="Cole" />
+    <div className={styles.page}>
+      <div className={styles.container}>
+        <Head>
+          <title>Create Next App</title>
+          <link rel="icon" href="/material-sort.svg" />
+        </Head>
+        <header className={styles.header}>
+          <Greeting name="Cole Friedlaender" />
+        </header>
+        <main className={styles.main}></main>
+      </div>
     </div>
   );
 }

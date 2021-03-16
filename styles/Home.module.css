@@ -1,17 +1,18 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.page {
+  background-color: grey;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
 }
-
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.container {
+  align-self: center;
+  justify-self: center;
+  background-color: var(--background-color);
+  height: 667px;
+  width: 375px;
+  display: grid;
+}
+.header {
+  justify-self: center;
+  padding-top: 20px;
 }
