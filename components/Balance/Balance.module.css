@@ -1,0 +1,32 @@
+.container {
+  background-color: var(--text-button-color);
+  height: 80px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: 25px 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 0 2px 5px;
+}
+.head {
+  color: var(--secundary-color);
+  align-self: center;
+  font-size: 15px;
+  grid-column: 1;
+  grid-row: 1;
+}
+.total {
+  font-size: 25px;
+  font-weight: bold;
+  grid-column: 1;
+  grid-row: 2;
+}
+.returnValue {
+  justify-self: end;
+  font-size: 25px;
+  font-weight: bold;
+  grid-column: 2;
+  grid-row: 2;
+  color: var(--positive-color);
+}
