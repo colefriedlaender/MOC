@@ -5,7 +5,7 @@ export type SubHeaderProps = {
 
 function SubHeadline({ date }: SubHeaderProps) {
   return (
-    <div className="container3">
+    <div className="subHeaderContainer">
       <div className="subHeader">Portfolio</div>
       <div className="date">{date}</div>
     </div>

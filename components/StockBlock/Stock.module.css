@@ -1,6 +1,5 @@
-.container {
-  background-color: #ffff;
-  font-family: Arial, Helvetica, sans-serif;
+.stockContainer {
+  background-color: var(--text-button-color);
   width: 350px;
   height: 70px;
   border-radius: 25px;
@@ -13,20 +12,18 @@
 }
 .stockName {
   align-self: center;
-  font-size: 20px;
 }
 .rate {
   align-self: center;
-  font-size: 20px;
   justify-self: end;
-  color: green;
+  color: var(--positive-color);
 }
 .amount {
   font-size: 15px;
-  color: #a2b2c9;
+  color: var(--secundary-color);
 }
 .total {
   font-size: 15px;
   justify-self: end;
-  color: #a2b2c9;
+  color: var(--secundary-color);
 }

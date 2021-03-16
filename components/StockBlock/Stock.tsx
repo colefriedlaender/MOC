@@ -9,7 +9,7 @@ export type StockProps = {
 
 function Stock({ amount, price, rate, stockName, total }: StockProps) {
   return (
-    <div className="container">
+    <div className="stockContainer">
       <div className="stockName">{stockName}</div>
       <div className="rate">{rate}%</div>
       <div className="amount">

@@ -1,6 +1,5 @@
-.container2 {
-  background-color: #ffff;
-  font-family: Arial, Helvetica, sans-serif;
+.balanceContainer {
+  background-color: var(--text-button-color);
   width: 350px;
   height: 80px;
   border-radius: 25px;
@@ -12,7 +11,7 @@
   box-shadow: 0 2px 5px;
 }
 .balanceHeader {
-  color: #a2b2c9;
+  color: var(--secundary-color);
   align-self: center;
   font-size: 15px;
   grid-column: 1;
@@ -30,5 +29,5 @@
   font-weight: bold;
   grid-column: 2;
   grid-row: 2;
-  color: green;
+  color: var(--positive-color);
 }

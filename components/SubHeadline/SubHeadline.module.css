@@ -1,20 +1,17 @@
-.container3 {
-  border: 2px solid red;
-  font-family: Arial, Helvetica, sans-serif;
+.subHeaderContainer {
+  border: 2px solid black;
   width: 350px;
   height: 70px;
   border-radius: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  color: #4067a1;
+  color: var(--main-color);
   padding-right: 25px;
   padding-left: 25px;
   align-content: center;
 }
-.subHeader {
-  font-size: 20px;
-}
 .date {
+  align-self: center;
   justify-self: end;
   display: inline;
   grid-column: 2;

@@ -5,8 +5,8 @@ export type Name = {
 
 function Button({ name }: Name) {
   return (
-    <div className={`header`}>
-      Hello,<span className={`name`}>{name}</span>
+    <div className="header">
+      Hello,<span className="name">{name}</span>
     </div>
   );
 }
