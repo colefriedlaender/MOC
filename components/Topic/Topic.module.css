@@ -1,0 +1,13 @@
+.container {
+  background-color: var(--text-button-color);
+  height: 55px;
+  border-radius: 25px;
+  display: grid;
+  box-shadow: 0 2px 5px;
+}
+.topic {
+  color: var(--main-color);
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+}
