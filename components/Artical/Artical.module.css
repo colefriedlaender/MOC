@@ -1,0 +1,14 @@
+.container {
+  background-color: var(--text-button-color);
+  height: 300px;
+  border-radius: 25px;
+  display: grid;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 0 2px 5px;
+  font-size: 15px;
+}
+.head {
+  color: var(--secundary-color);
+  align-self: center;
+}
