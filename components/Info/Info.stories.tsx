@@ -12,6 +12,6 @@ const Template: Story<InfoProps> = (args) => <Info {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   firstWord: "Yearly",
-  otherWords: "Return Rate",
-  information: "2,54%",
+  restOfPhrase: "Return Rate",
+  content: "2,54%",
 };

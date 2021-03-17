@@ -1,18 +1,18 @@
 import styles from "../Info/Info.module.css";
 export type InfoProps = {
   firstWord: string;
-  otherWords: string;
-  information: string;
+  restOfPhrase: string;
+  content: string;
 };
 
-function Info({ firstWord, otherWords, information }: InfoProps) {
+function Info({ firstWord, restOfPhrase, content }: InfoProps) {
   return (
     <div className={styles.container}>
       <div className={styles.firstWord}>
         {firstWord}
-        <span className={styles.secondWord}>{otherWords}</span>
+        <span className={styles.secondWord}>{restOfPhrase}</span>
       </div>
-      <div className={styles.information}>{information}</div>
+      <div className={styles.information}>{content}</div>
     </div>
   );
 }
