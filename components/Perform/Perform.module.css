@@ -1,0 +1,25 @@
+.container {
+  background-color: var(--text-button-color);
+  border-radius: 1.3em;
+  height: 100px;
+  display: grid;
+  grid-template-rows: 45% 1fr;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-shadow: 0 2px 5px;
+}
+.head {
+  padding-top: 0.5em;
+  text-align: center;
+}
+.perform {
+  color: var(--main-color);
+  font-size: 0.7em;
+  text-align: center;
+}
+.performRate {
+  font-size: 0.7em;
+  color: var(--positive-color);
+  align-self: start;
+  justify-self: center;
+}
