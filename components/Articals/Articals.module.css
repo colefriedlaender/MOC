@@ -1,12 +1,11 @@
 .container {
   background-color: var(--text-button-color);
-  height: 300px;
-  border-radius: 25px;
+  border-radius: 1.3em;
   display: grid;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
   box-shadow: 0 2px 5px;
-  font-size: 15px;
+  font-size: 0.7em;
 }
 .head {
   color: var(--secundary-color);
