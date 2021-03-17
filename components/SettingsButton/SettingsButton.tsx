@@ -4,7 +4,7 @@ export type SettingsButtonProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
 };
 
-function Balance({ onClick }: SettingsButtonProps) {
+function SettingsButton({ onClick }: SettingsButtonProps) {
   return (
     <div>
       <img
@@ -16,4 +16,4 @@ function Balance({ onClick }: SettingsButtonProps) {
   );
 }
 
-export default Balance;
+export default SettingsButton;
