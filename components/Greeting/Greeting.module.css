@@ -1,11 +1,5 @@
 .container {
-  border-radius: 25px;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
   color: var(--main-color);
-  padding-right: 25px;
-  padding-left: 25px;
-  align-content: center;
 }
 .name {
   display: block;

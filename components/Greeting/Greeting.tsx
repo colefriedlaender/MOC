@@ -1,7 +1,7 @@
 import styles from "../Greeting/Greeting.module.css";
 export type NameProps = { name: string };
 
-function Button({ name }: NameProps) {
+function Greeting({ name }: NameProps) {
   return (
     <div className={styles.container}>
       <div className={styles.geeting}>
@@ -11,4 +11,4 @@ function Button({ name }: NameProps) {
   );
 }
 
-export default Button;
+export default Greeting;
