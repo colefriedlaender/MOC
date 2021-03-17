@@ -12,7 +12,3 @@ const Template: Story<SettingsButtonProps> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {
-  total: "11,300,34",
-  returnValue: "2,45",
-};
