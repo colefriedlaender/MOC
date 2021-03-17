@@ -1,7 +1,6 @@
 .container {
   background-color: var(--text-button-color);
-  height: 55px;
-  border-radius: 25px;
+  border-radius: 1.3em;
   display: grid;
   box-shadow: 0 2px 5px;
 }
