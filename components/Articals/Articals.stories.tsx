@@ -1,13 +1,13 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import Artical, { ArticalProps } from "./Artical";
+import Articals, { ArticalsProps } from "./Articals";
 
 export default {
-  title: "Common/Artical",
-  component: Artical,
+  title: "Common/Articals",
+  component: Articals,
 } as Meta;
 
-const Template: Story<ArticalProps> = (args) => <Artical {...args} />;
+const Template: Story<ArticalsProps> = (args) => <Articals {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

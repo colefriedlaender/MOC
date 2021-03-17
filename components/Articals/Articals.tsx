@@ -1,5 +1,5 @@
 import styles from "../Artical/Artical.module.css";
-export type ArticalProps = {
+export type ArticalsProps = {
   linkNameOne: string;
   linkNameTwo: string;
   linkNameThree: string;
@@ -7,13 +7,13 @@ export type ArticalProps = {
   linkNameFive: string;
 };
 
-function Artical({
+function Articals({
   linkNameOne,
   linkNameTwo,
   linkNameThree,
   linkNameFour,
   linkNameFive,
-}: ArticalProps) {
+}: ArticalsProps) {
   return (
     <div className={styles.container}>
       <div className={styles.head}>Articals</div>
@@ -26,4 +26,4 @@ function Artical({
   );
 }
 
-export default Artical;
+export default Articals;
