@@ -1,4 +1,4 @@
-import styles from "../Artical/Artical.module.css";
+import styles from "../Articals/Articals.module.css";
 export type ArticalsProps = {
   linkNameOne: string;
   linkNameTwo: string;
