@@ -1,14 +1,14 @@
 import { MouseEventHandler } from "react";
 
-export type SettingsButtonProps = {
+export type BackButtonProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
 };
 
-function BackButton({ onClick }: SettingsButtonProps) {
+function BackButton({ onClick }: BackButtonProps) {
   return (
     <div>
       <img
-        src="/Icons/material-settings.svg"
+        src="/Icons/material-back.svg"
         alt="Setings Button"
         onClick={onClick}
       />
