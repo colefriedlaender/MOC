@@ -1,13 +1,13 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import Stock, { StockProps } from "./Stock";
+import StockListItem, { StockProps } from "./StockListItem";
 
 export default {
-  title: "Common/Stock",
-  component: Stock,
+  title: "Common/StockListItem",
+  component: StockListItem,
 } as Meta;
 
-const Template: Story<StockProps> = (args) => <Stock {...args} />;
+const Template: Story<StockProps> = (args) => <StockListItem {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

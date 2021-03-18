@@ -1,0 +1,2 @@
+### Get all Tracks
+GET http://localhost:3000/api/stocks
