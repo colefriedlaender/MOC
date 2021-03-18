@@ -1,7 +1,7 @@
 {
   "stocks": [
     {
-      "id": "1",
+      "id": "APPL_INC",
       "name": "APPL INC.",
       "rate": 3.83,
       "price": 100,
@@ -11,7 +11,7 @@
       "perfomance": 1.43
     },
     {
-      "id": "2",
+      "id": "GOOGLE",
       "name": "Google",
       "rate": 2.56,
       "price": 50,
@@ -21,7 +21,17 @@
       "perfomance": 3.54
     },
     {
-      "id": "3",
+      "id": "MICROSOFT",
+      "name": "Microsoft",
+      "rate": 1.45,
+      "price": 45,
+      "amount": 2,
+      "total": 90,
+      "yearlyRate": 3.45,
+      "perfomance": 5.78
+    },
+    {
+      "id": "MICROSOFT",
       "name": "Microsoft",
       "rate": 1.45,
       "price": 45,
