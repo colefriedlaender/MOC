@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import Greeting from "../../components/Greeting/Greeting";
 import StockListItem from "../../components/StockListItem/StockListItem";
 import { getStock, Stock } from "../../utils/api";
 import styles from "../../styles/id.module.css";
