@@ -4,7 +4,7 @@ export type SettingsButtonProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
 };
 
-function BackButton({ onClick }: SettingsButtonProps) {
+function SettingsButton({ onClick }: SettingsButtonProps) {
   return (
     <div>
       <img
@@ -16,4 +16,4 @@ function BackButton({ onClick }: SettingsButtonProps) {
   );
 }
 
-export default BackButton;
+export default SettingsButton;
