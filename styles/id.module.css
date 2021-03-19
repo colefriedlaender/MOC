@@ -13,35 +13,25 @@
   height: 667px;
   width: 375px;
   display: grid;
-  grid-template-rows: 25% 1fr 10%;
+  grid-template-rows: 15% 1fr 10%;
 }
 
 .header {
   justify-self: center;
   padding-top: 20px;
   display: grid;
-  width: 90%;
+  width: 45%;
   height: 100%;
   row-gap: 5%;
-}
-.settingsButton {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: center;
-  justify-self: end;
-}
-.balance {
-  grid-column: 1 / span 2;
-  grid-row: 2;
 }
 .main {
   justify-self: center;
   display: grid;
-  grid-template-rows: 15% 1fr;
   width: 90%;
   height: 100%;
+  row-gap: 5%;
 }
-.list {
-  width: 100%;
-  height: 100%;
+.loadingState {
+  align-self: center;
+  justify-self: center;
 }
