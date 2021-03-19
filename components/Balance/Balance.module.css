@@ -1,5 +1,5 @@
 .container {
-  height: 60px;
+  height: 75px;
   background-color: var(--text-button-color);
   border-radius: 1.3em;
   display: grid;

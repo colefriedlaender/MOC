@@ -19,6 +19,7 @@
     "build-server": "tsc --project tsconfig.server.json"
   },
   "dependencies": {
+    "fs.promises": "^0.1.2",
     "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",

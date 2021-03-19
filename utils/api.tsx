@@ -1,5 +1,5 @@
 export type Stock = {
-  id: number;
+  id: string;
   name: string;
   rate: number;
   amount: number;
@@ -15,10 +15,10 @@ export async function getStocks(): Promise<Stock[]> {
   return await fetchURL<Stock[]>("/api/stocks");
 }
 
-export async function getTrack(id: string): Promise<Stock> {
+export async function getStock(id: string): Promise<Stock> {
   return await fetchURL<Stock>(`/api/stocks/${id}`);
 }
-export async function deleteTrack(id: string) {
+export async function deleteStock(id: string) {
   await fetch(`/api/tracks/${id}`, {
     method: "DELETE",
   });
