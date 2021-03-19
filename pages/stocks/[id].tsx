@@ -35,7 +35,6 @@ export default function Overview() {
         <main className={styles.main}>
           <StockListItem stock={stock} />
         </main>
-        <footer className={styles.footer}></footer>
       </div>
     </div>
   );
