@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import styles from "../SettingsButton/SettingsButton.module.css";
 
 export type SettingsButtonProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
@@ -6,7 +7,7 @@ export type SettingsButtonProps = {
 
 function SettingsButton({ onClick }: SettingsButtonProps) {
   return (
-    <div>
+    <div className={styles.btn}>
       <img
         src="/Icons/material-settings.svg"
         alt="Setings Button"
