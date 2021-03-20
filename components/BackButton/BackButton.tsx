@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import styles from "../BackButton/BackButton.module.css";
 
 export type BackButtonProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
@@ -6,7 +7,7 @@ export type BackButtonProps = {
 
 function BackButton({ onClick }: BackButtonProps) {
   return (
-    <div>
+    <div className={styles.btn}>
       <img
         src="/Icons/material-back.svg"
         alt="Setings Button"
@@ -15,5 +16,4 @@ function BackButton({ onClick }: BackButtonProps) {
     </div>
   );
 }
-
 export default BackButton;
