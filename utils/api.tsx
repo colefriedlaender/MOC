@@ -1,4 +1,5 @@
 export type Stock = {
+  userName: string;
   id: string;
   name: string;
   rate: number;
@@ -12,7 +13,7 @@ async function fetchURL<T>(url: string): Promise<T> {
 }
 
 export async function getStocks(): Promise<Stock[]> {
-  return await fetchURL<Stock[]>("/api/stocks");
+  return await fetchURL<Stock[]>("/api/userName");
 }
 
 export async function getStock(id: string): Promise<Stock> {
