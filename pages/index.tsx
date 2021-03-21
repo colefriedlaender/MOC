@@ -20,6 +20,9 @@ export default function Home() {
       setStocks(newStocks);
     });
   }, []);
+  if (!stocks) {
+    return <div className={styles.loadingState}>...Loading</div>;
+  }
   const stockItems = stocks.map((stock) => (
     <Link href={`/stocks/${stock.id}`} key={stock.id}>
       <a>
@@ -37,11 +40,11 @@ export default function Home() {
         <header className={styles.header}>
           <Greeting name={userName} />
           <section className={styles.settingsButton}>
-            <SettingsButtonStories
-              onClick={() => {
-                alert("You pressed the Settings Button");
-              }}
-            />
+            <Link href={`/settings`}>
+              <a>
+                <SettingsButtonStories />
+              </a>
+            </Link>
           </section>
           <section className={styles.balance}>
             <Balance total={10000} returnValue={2.45} />
