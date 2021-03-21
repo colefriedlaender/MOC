@@ -1,9 +1,4 @@
-import { MouseEventHandler } from "react";
 import styles from "../SettingsButton/SettingsButton.module.css";
-
-export type SettingsButtonProps = {
-  onClick: MouseEventHandler<HTMLImageElement>;
-};
 
 function SettingsButton() {
   return (
