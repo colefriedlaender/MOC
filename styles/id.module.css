@@ -20,9 +20,15 @@
   justify-self: center;
   padding-top: 20px;
   display: grid;
-  width: 45%;
+  grid-template-columns: 10% 1fr;
+  width: 90%;
   height: 100%;
-  row-gap: 5%;
+  align-items: center;
+  justify-items: center;
+  padding-right: 10%;
+}
+.topic {
+  width: 50%;
 }
 .main {
   justify-self: center;
@@ -32,6 +38,6 @@
   row-gap: 5%;
 }
 .loadingState {
-  align-self: center;
-  justify-self: center;
+  text-align: center;
+  color: black;
 }

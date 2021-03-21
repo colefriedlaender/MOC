@@ -5,6 +5,7 @@ import { getStock, Stock } from "../../utils/api";
 import styles from "../../styles/id.module.css";
 import { useRouter } from "next/dist/client/router";
 import Topic from "../../components/Topic/Topic";
+import BackButton from "../../components/BackButton/BackButton";
 
 export default function Overview() {
   const router = useRouter();
@@ -30,7 +31,14 @@ export default function Overview() {
           <link rel="icon" href="/Icons/material-home.svg.svg" />
         </Head>
         <header className={styles.header}>
-          <Topic topic={"Overview"} />
+          <BackButton
+            onClick={() => {
+              history.back();
+            }}
+          />
+          <section className={styles.topic}>
+            <Topic topic={"Overview"} />
+          </section>
         </header>
         <main className={styles.main}>
           <StockListItem stock={stock} />

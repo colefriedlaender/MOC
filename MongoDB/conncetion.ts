@@ -11,6 +11,8 @@ let db = null;
 
 const url = process.env.MONGODB_URL;
 
+export const user = "Cole Friedlaender";
+
 type Handler = (req: NextApiRequest, res: NextApiResponse) => void;
 export const withDatabase = (handler: Handler) => async (
   req: NextApiRequest,
@@ -45,7 +47,7 @@ export async function updateUserDoc(
   userName,
   fieldsToUpdate: Partial<UserDoc>
 ) {
-  const userCollection = await getCollection("MOC-ThinkBIG");
+  const userCollection = await getCollection("userName");
   const updateResult = await userCollection.updateOne(
     { name: userName },
     { $set: fieldsToUpdate }
@@ -54,7 +56,7 @@ export async function updateUserDoc(
 }
 
 export async function deletePersonnel(userName) {
-  const personnelCollection = await getCollection("MOC-ThinkBIG");
+  const personnelCollection = await getCollection("userName");
   const deleteResult = await personnelCollection.deleteOne({
     name: userName,
   });
