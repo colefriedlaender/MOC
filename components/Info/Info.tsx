@@ -10,7 +10,7 @@ function Info({ firstWord, restOfPhrase, content }: InfoProps) {
     <div className={styles.container}>
       <div className={styles.firstWord}>
         {firstWord}
-        <span className={styles.secondWord}>{restOfPhrase}</span>
+        <span className={styles.restOfPhrase}>{restOfPhrase}</span>
       </div>
       <div className={styles.information}>{content}</div>
     </div>
