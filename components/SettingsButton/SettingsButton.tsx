@@ -5,14 +5,10 @@ export type SettingsButtonProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
 };
 
-function SettingsButton({ onClick }: SettingsButtonProps) {
+function SettingsButton() {
   return (
     <div className={styles.btn}>
-      <img
-        src="/Icons/material-settings.svg"
-        alt="Setings Button"
-        onClick={onClick}
-      />
+      <img src="/Icons/material-settings.svg" alt="Setings Button" />
     </div>
   );
 }
