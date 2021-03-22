@@ -8,6 +8,7 @@ import SubHeadline from "../components/SubHeadline/SubHeadline";
 import styles from "../styles/Home.module.css";
 import { getStocks, Stock } from "../utils/api";
 import Link from "next/link";
+import Navbar from "../components/Navbar/Nabar";
 
 const userName = "Cole Friedlaender";
 const date = "14.03.2021";
@@ -52,11 +53,13 @@ export default function Home() {
         </header>
         <main className={styles.main}>
           <SubHeadline date={date} />
-          <section>
-            <div className={styles.list}>{stockItems}</div>
+          <section className={styles.list}>
+            <div>{stockItems}</div>
           </section>
         </main>
-        <footer className={styles.footer}></footer>
+        <footer className={styles.footer}>
+          <Navbar />
+        </footer>
       </div>
     </div>
   );
