@@ -7,6 +7,9 @@ import { useRouter } from "next/dist/client/router";
 import Topic from "../../components/Topic/Topic";
 import BackButton from "../../components/BackButton/BackButton";
 import loadingPage from "../loadingPage";
+import Info from "../../components/Info/Info";
+import Perform from "../../components/Perform/Perform";
+import Navbar from "../../components/Navbar/Nabar";
 
 export default function Overview() {
   const router = useRouter();
@@ -43,7 +46,29 @@ export default function Overview() {
         </header>
         <main className={styles.main}>
           <StockListItem stock={stock} />
+          <section className={styles.info}>
+            <Info
+              firstWord={"Yearly"}
+              restOfPhrase={"Return Value"}
+              content={"1.45"}
+            />
+            <Info
+              firstWord={"Yearly"}
+              restOfPhrase={"Return Value"}
+              content={"1.45"}
+            />
+          </section>
+          <Perform
+            head={"Performance"}
+            performanceRate={"4,56"}
+            performanceText={
+              "Compared to the MSCI World Equity the Stock performes"
+            }
+          />
         </main>
+        <footer className={styles.footer}>
+          <Navbar />
+        </footer>
       </div>
     </div>
   );

@@ -33,11 +33,21 @@
 .main {
   justify-self: center;
   display: grid;
+  grid-template-rows: 50px 100px 100px;
+  row-gap: 3%;
   width: 90%;
   height: 100%;
-  row-gap: 5%;
+}
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
 }
 .loadingState {
   text-align: center;
   color: black;
+}
+.footer {
+  align-self: end;
+  position: sticky;
 }
