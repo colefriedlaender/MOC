@@ -1,6 +1,6 @@
 .container {
   background-color: var(--text-button-color);
-  height: 50px;
+  height: 60px;
   border-radius: 1.3em;
   display: grid;
   grid-template-rows: 60% 1fr;

@@ -1,20 +1,8 @@
-.page {
-  background-color: grey;
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-}
 .container {
-  border: 5px solid black;
-  border-radius: 25px;
-  align-self: center;
-  justify-self: center;
+  height: 100vh;
   background-color: var(--background-color);
-  height: 667px;
-  width: 375px;
   display: grid;
-  grid-template-rows: 25% 1fr 10%;
-  overflow-x: auto;
+  grid-template-rows: 25% 1fr 55px;
 }
 .container::-webkit-scrollbar {
   display: none;
@@ -22,7 +10,7 @@
 
 .header {
   justify-self: center;
-  padding-top: 20px;
+  padding-top: 1em;
   display: grid;
   width: 90%;
   height: 100%;
@@ -31,7 +19,7 @@
 .settingsButton {
   grid-column: 2;
   grid-row: 1;
-  align-self: center;
+  align-self: start;
   justify-self: end;
 }
 .balance {
@@ -51,6 +39,6 @@
   height: 100%;
 }
 .footer {
-  align-self: end;
+  bottom: 0;
   position: sticky;
 }

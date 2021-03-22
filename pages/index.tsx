@@ -32,35 +32,33 @@ export default function Home() {
     </Link>
   ));
   return (
-    <div className={styles.page}>
-      <div className={styles.container}>
-        <Head>
-          <title>MOC</title>
-          <link rel="icon" href="/Icons/material-home.svg.svg" />
-        </Head>
-        <header className={styles.header}>
-          <Greeting name={userName} />
-          <section className={styles.settingsButton}>
-            <Link href={`/settings`}>
-              <a>
-                <SettingsButtonStories />
-              </a>
-            </Link>
-          </section>
-          <section className={styles.balance}>
-            <Balance total={10000} returnValue={2.45} />
-          </section>
-        </header>
-        <main className={styles.main}>
-          <SubHeadline date={date} />
-          <section className={styles.list}>
-            <div>{stockItems}</div>
-          </section>
-        </main>
-        <footer className={styles.footer}>
-          <Navbar />
-        </footer>
-      </div>
+    <div className={styles.container}>
+      <Head>
+        <title>MOC</title>
+        <link rel="icon" href="/Icons/favicon.png" />
+      </Head>
+      <header className={styles.header}>
+        <Greeting name={userName} />
+        <section className={styles.settingsButton}>
+          <Link href={`/settings`}>
+            <a>
+              <SettingsButtonStories />
+            </a>
+          </Link>
+        </section>
+        <section className={styles.balance}>
+          <Balance total={10000} returnValue={2.45} />
+        </section>
+      </header>
+      <main className={styles.main}>
+        <SubHeadline date={date} />
+        <section className={styles.list}>
+          <div>{stockItems}</div>
+        </section>
+      </main>
+      <footer className={styles.footer}>
+        <Navbar />
+      </footer>
     </div>
   );
 }

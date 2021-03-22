@@ -13,20 +13,18 @@ export default function loadingPage() {
     },
   };
   return (
-    <div className={styles.page}>
-      <div className={styles.container}>
-        <Head>
-          <title>MOC</title>
-          <link rel="icon" href="/Icons/material-home.svg.svg" />
-        </Head>
-        <header className={styles.header}></header>
-        <main className={styles.main}>
-          <div className={styles.loading}>
-            <Lottie options={defaultOptions} height={200} width={200} />
-          </div>
-        </main>
-        <footer className={styles.footer}></footer>
-      </div>
+    <div className={styles.container}>
+      <Head>
+        <title>MOC</title>
+        <link rel="icon" href="/Icons/favicon.png" />
+      </Head>
+      <header className={styles.header}></header>
+      <main className={styles.main}>
+        <div className={styles.loading}>
+          <Lottie options={defaultOptions} height={200} width={200} />
+        </div>
+      </main>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }
