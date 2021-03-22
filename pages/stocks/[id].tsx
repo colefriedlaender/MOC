@@ -6,6 +6,7 @@ import styles from "../../styles/id.module.css";
 import { useRouter } from "next/dist/client/router";
 import Topic from "../../components/Topic/Topic";
 import BackButton from "../../components/BackButton/BackButton";
+import loadingPage from "../loadingPage";
 import Info from "../../components/Info/Info";
 import Perform from "../../components/Perform/Perform";
 import Navbar from "../../components/Navbar/Nabar";
@@ -24,7 +25,7 @@ export default function Overview() {
     });
   }, [id]);
   if (!stock) {
-    return <div className={styles.loadingState}>...Loading</div>;
+    return loadingPage();
   }
   return (
     <div className={styles.page}>
