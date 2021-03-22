@@ -1,34 +1,25 @@
-.page {
-  background-color: grey;
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-}
 .container {
-  border: 5px solid black;
-  border-radius: 25px;
-  align-self: center;
-  justify-self: center;
   background-color: var(--background-color);
-  height: 667px;
-  width: 375px;
   display: grid;
+  height: 100vh;
   grid-template-rows: 15% 1fr 10%;
 }
 
 .header {
   justify-self: center;
-  padding-top: 20px;
   display: grid;
   grid-template-columns: 10% 1fr;
   width: 90%;
   height: 100%;
+  padding-top: 1em;
   align-items: center;
   justify-items: center;
   padding-right: 10%;
 }
 .topic {
   width: 50%;
+  justify-self: center;
+  align-self: center;
 }
 .main {
   justify-self: center;
