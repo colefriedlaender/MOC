@@ -28,48 +28,46 @@ export default function Overview() {
     return loadingPage();
   }
   return (
-    <div className={styles.page}>
-      <div className={styles.container}>
-        <Head>
-          <title>MOC</title>
-          <link rel="icon" href="/Icons/material-home.svg.svg" />
-        </Head>
-        <header className={styles.header}>
-          <BackButton
-            onClick={() => {
-              history.back();
-            }}
+    <div className={styles.container}>
+      <Head>
+        <title>MOC</title>
+        <link rel="icon" href="/Icons/favicon.png" />
+      </Head>
+      <header className={styles.header}>
+        <BackButton
+          onClick={() => {
+            history.back();
+          }}
+        />
+        <section className={styles.topic}>
+          <Topic topic={"Overview"} />
+        </section>
+      </header>
+      <main className={styles.main}>
+        <StockListItem stock={stock} />
+        <section className={styles.info}>
+          <Info
+            firstWord={"Yearly"}
+            restOfPhrase={"Return Value"}
+            content={"1.45"}
           />
-          <section className={styles.topic}>
-            <Topic topic={"Overview"} />
-          </section>
-        </header>
-        <main className={styles.main}>
-          <StockListItem stock={stock} />
-          <section className={styles.info}>
-            <Info
-              firstWord={"Yearly"}
-              restOfPhrase={"Return Value"}
-              content={"1.45"}
-            />
-            <Info
-              firstWord={"Yearly"}
-              restOfPhrase={"Return Value"}
-              content={"1.45"}
-            />
-          </section>
-          <Perform
-            head={"Performance"}
-            performanceRate={"4,56"}
-            performanceText={
-              "Compared to the MSCI World Equity the Stock performes"
-            }
+          <Info
+            firstWord={"Yearly"}
+            restOfPhrase={"Return Value"}
+            content={"1.45"}
           />
-        </main>
-        <footer className={styles.footer}>
-          <Navbar />
-        </footer>
-      </div>
+        </section>
+        <Perform
+          head={"Performance"}
+          performanceRate={"4,56"}
+          performanceText={
+            "Compared to the MSCI World Equity the Stock performes"
+          }
+        />
+      </main>
+      <footer className={styles.footer}>
+        <Navbar />
+      </footer>
     </div>
   );
 }
