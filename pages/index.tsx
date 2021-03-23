@@ -37,28 +37,34 @@ export default function Home() {
         <title>MOC</title>
         <link rel="icon" href="/Icons/favicon.png" />
       </Head>
-      <header className={styles.header}>
-        <Greeting name={userName} />
-        <section className={styles.settingsButton}>
-          <Link href={`/settings`}>
-            <a>
-              <SettingsButtonStories />
-            </a>
-          </Link>
-        </section>
-        <section className={styles.balance}>
-          <Balance total={10000} returnValue={2.45} />
-        </section>
-      </header>
-      <main className={styles.main}>
-        <SubHeadline date={date} />
-        <section className={styles.list}>
-          <div>{stockItems}</div>
-        </section>
-      </main>
-      <footer className={styles.footer}>
+      <div className={styles.headerContainer}>
+        <header className={styles.header}>
+          <Greeting name={userName} />
+          <section className={styles.settingsButton}>
+            <Link href={`/settings`}>
+              <a>
+                <SettingsButtonStories />
+              </a>
+            </Link>
+          </section>
+          <section className={styles.balance}>
+            <Balance total={10000} returnValue={2.45} />
+          </section>
+          <section className={styles.date}>
+            <SubHeadline date={date} />
+          </section>
+        </header>
+      </div>
+      <div className={styles.mainContainer}>
+        <main className={styles.main}>
+          <section className={styles.list}>
+            <div>{stockItems}</div>
+          </section>
+        </main>
+      </div>
+      <div className={styles.footerContainer}>
         <Navbar />
-      </footer>
+      </div>
     </div>
   );
 }

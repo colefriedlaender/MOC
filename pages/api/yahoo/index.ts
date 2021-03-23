@@ -1,4 +1,4 @@
-export async function getStockInformation() {
+export default async function getStockInformation() {
   const response = await fetch(
     "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-summary?symbol=AAPL&region=DE",
     {

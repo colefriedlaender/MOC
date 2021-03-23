@@ -2,7 +2,7 @@
   height: 100vh;
   background-color: var(--background-color);
   display: grid;
-  grid-template-rows: 15% 1fr 10%;
+  grid-template-rows: 15% 30% 1fr;
 }
 
 .header {
@@ -20,10 +20,12 @@
   width: 50%;
 }
 .main {
+  align-self: center;
   justify-self: center;
   display: grid;
-  grid-template-rows: 50px 100px 100px;
-  row-gap: 3%;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 5%;
+  row-gap: 2%;
   width: 90%;
   height: 100%;
 }
