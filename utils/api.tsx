@@ -41,5 +41,5 @@ export async function getStockInformation() {
     .catch((err) => {
       console.error(err);
     });
-  return response;
+  return console.log({ response });
 }
