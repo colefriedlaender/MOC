@@ -9,6 +9,7 @@ import styles from "../styles/Home.module.css";
 import { getStocks, Stock } from "../utils/api";
 import Link from "next/link";
 import Navbar from "../components/Navbar/Nabar";
+import loadingPage from "./loadingPage";
 
 const userName = "Cole Friedlaender";
 const date = "14.03.2021";
@@ -22,7 +23,7 @@ export default function Home() {
     });
   }, []);
   if (!stocks) {
-    return <div className={styles.loadingState}>...Loading</div>;
+    return loadingPage();
   }
   const stockItems = stocks.map((stock) => (
     <Link href={`/stocks/${stock.id}`} key={stock.id}>
