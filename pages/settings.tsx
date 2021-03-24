@@ -6,7 +6,6 @@ import Lottie from "react-lottie";
 // import animationData from "../lotties/loading.json";
 // import animationData from "../lotties/404.json";
 import animationData from "../lotties/construction.json";
-import { getStockInformation } from "../utils/api";
 export default function Settings() {
   const defaultOptions = {
     loop: true,
