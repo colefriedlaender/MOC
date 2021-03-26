@@ -11,7 +11,7 @@ let db = null;
 
 const url = process.env.MONGODB_URL;
 
-export const user = "Cole Friedlaender";
+export const user = "Leon Machens";
 
 type Handler = (req: NextApiRequest, res: NextApiResponse) => void;
 export const withDatabase = (handler: Handler) => async (
@@ -61,4 +61,10 @@ export async function deletePersonnel(userName) {
     name: userName,
   });
   return deleteResult.deletedCount >= 1;
+}
+export async function getIDsForUser(userName: string) {
+  const db = await readUserName(userName);
+  return db.stocks.map((result) => {
+    return { id: result.id };
+  });
 }
