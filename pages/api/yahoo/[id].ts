@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-
+const key = process.env.API_KEY;
 export default async function getStockInformationFromAPI(
   req: NextApiRequest,
   res: NextApiResponse
@@ -10,7 +10,7 @@ export default async function getStockInformationFromAPI(
     {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "3149d31e50msh6d254d7a80185a4p1ff4a4jsn4d989f771b80",
+        "x-rapidapi-key": key,
         "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
       },
     }

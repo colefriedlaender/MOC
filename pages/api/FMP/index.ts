@@ -1,7 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dotenv from "dotenv";
 import { getIDsForUser, user, withDatabase } from "../../../MongoDB/conncetion";
-dotenv.config();
 const key = process.env.API_CODE;
 
 export default withDatabase(async function getStockInformationFromAPI(
