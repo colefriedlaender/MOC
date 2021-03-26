@@ -5,6 +5,11 @@ export type ArticalsProps = {
   linkNameThree: string;
   linkNameFour: string;
   linkNameFive: string;
+  titleNameOne: string;
+  titleNameTwo: string;
+  titleNameThree: string;
+  titleNameFour: string;
+  titleNameFive: string;
 };
 
 function Articals({
@@ -13,15 +18,30 @@ function Articals({
   linkNameThree,
   linkNameFour,
   linkNameFive,
+  titleNameOne,
+  titleNameTwo,
+  titleNameThree,
+  titleNameFour,
+  titleNameFive,
 }: ArticalsProps) {
   return (
     <div className={styles.container}>
       <div className={styles.head}>Articals</div>
-      <div className={styles.linkName}>- {linkNameOne}</div>
-      <div className={styles.linkName}>- {linkNameTwo}</div>
-      <div className={styles.linkName}>- {linkNameThree}</div>
-      <div className={styles.linkName}>- {linkNameFour}</div>
-      <div className={styles.linkName}>- {linkNameFive}</div>
+      <a href={titleNameOne}>
+        <div className={styles.linkName}>- {linkNameOne}</div>
+      </a>
+      <a href={titleNameTwo}>
+        <div className={styles.linkName}>- {linkNameTwo}</div>
+      </a>
+      <a href={titleNameThree}>
+        <div className={styles.linkName}>- {linkNameThree}</div>
+      </a>
+      <a href={titleNameFour}>
+        <div className={styles.linkName}>- {linkNameFour}</div>
+      </a>
+      <a href={titleNameFive}>
+        <div className={styles.linkName}>- {linkNameFive}</div>
+      </a>
     </div>
   );
 }
