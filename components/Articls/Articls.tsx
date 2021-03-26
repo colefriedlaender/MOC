@@ -1,4 +1,4 @@
-import styles from "../Articals/Articals.module.css";
+import styles from "../Articls/Articls.module.css";
 export type ArticalsProps = {
   linkNameOne: string;
   linkNameTwo: string;
@@ -26,7 +26,7 @@ function Articals({
 }: ArticalsProps) {
   return (
     <div className={styles.container}>
-      <div className={styles.head}>Articals</div>
+      <div className={styles.head}>Articls</div>
       <a href={titleNameOne}>
         <div className={styles.linkName}>- {linkNameOne}</div>
       </a>

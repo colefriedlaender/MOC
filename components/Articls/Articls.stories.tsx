@@ -1,6 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import Articals, { ArticalsProps } from "./Articals";
+import Articals, { ArticalsProps } from "./Articls";
 
 export default {
   title: "Common/Articals",

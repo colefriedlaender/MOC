@@ -17,7 +17,7 @@ import loadingPage from "../loadingPage";
 import Info from "../../components/Info/Info";
 import Perform from "../../components/Perform/Perform";
 import Navbar from "../../components/Navbar/Nabar";
-import Articals from "../../components/Articals/Articals";
+import Articals from "../../components/Articls/Articls";
 
 export default function Overview() {
   const router = useRouter();
