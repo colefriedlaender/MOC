@@ -15,11 +15,12 @@ export default function Settings() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
   return (
     <div className={styles.container}>
       <Head>
         <title>MOC</title>
-        <link rel="icon" href="/Icons/favicon.png" />
+        <link rel="icon" href="/Icons/favicon.toilett.png" />
       </Head>
       <header className={styles.header}>
         <BackButton
@@ -34,15 +35,6 @@ export default function Settings() {
       <main className={styles.main}>
         <div className={styles.loading}>
           <Lottie options={defaultOptions} height={220} width={300} />
-        </div>
-        <div>
-          <button
-            onClick={() => {
-              getStockInformation();
-            }}
-          >
-            API
-          </button>
         </div>
       </main>
       <footer className={styles.footer}></footer>
