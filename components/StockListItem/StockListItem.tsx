@@ -1,16 +1,22 @@
-import { Stock } from "../../utils/api";
 import styles from "../StockListItem/StockListItem.module.css";
 export type StockProps = {
-  stock: Stock;
+  amount: number;
+  price: number;
+  stockName: string;
+  priceAPI: number;
 };
 
-function StockListItem({
-  stock: { amount, price, rate, name, total },
-}: StockProps) {
+function StockListItem({ amount, price, priceAPI, stockName }: StockProps) {
+  const sum4 = priceAPI * amount;
+  const total = sum4.toFixed(2);
+  const sum1 = priceAPI - price;
+  const sum2 = sum1 / price;
+  const sum3 = sum2 * 100;
+  const rate = sum3.toFixed(2);
   return (
     <div className={styles.container}>
-      <div className={styles.stockName}>{name}</div>
-      <div className={styles.stockRate}>+{rate}%</div>
+      <div className={styles.stockName}>{stockName}</div>
+      <div className={styles.stockRate}>{rate}%</div>
       <div className={styles.amount}>
         {amount} x ${price}
       </div>
