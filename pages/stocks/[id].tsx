@@ -92,7 +92,7 @@ export default function Overview() {
           head={"Performance"}
           performanceRate={"4,56"}
           performanceText={
-            "Compared to the MSCI World Equity the Stock performes"
+            "Compared to the MSCI World Equity the Stock performs"
           }
         />
         <Articals
