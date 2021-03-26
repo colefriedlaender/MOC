@@ -23,7 +23,7 @@
   align-self: center;
   justify-self: center;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 5%;
   row-gap: 2%;
   width: 90%;
