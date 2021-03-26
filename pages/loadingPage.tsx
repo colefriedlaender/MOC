@@ -16,7 +16,7 @@ export default function loadingPage() {
     <div className={styles.container}>
       <Head>
         <title>MOC</title>
-        <link rel="icon" href="/Icons/favicon.png" />
+        <link rel="icon" href="/Icons/favicon.toilett.png" />
       </Head>
       <header className={styles.header}></header>
       <main className={styles.main}>

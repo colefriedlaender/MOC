@@ -1,12 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 const key = process.env.API_KEY;
-
 export default async function getStockInformationFromAPI(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const { id } = req.query;
   const results = await fetch(
-    "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-news?category=AAPL&region=US",
+    `https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-news?category=${id}&region=US`,
     {
       method: "GET",
       headers: {
@@ -26,5 +26,5 @@ export default async function getStockInformationFromAPI(
   const leon = cole.map((result) => {
     return { title: result.title, link: result.link };
   });
-  res.status(200).json(leon.slice(0, 5));
+  res.status(200).json(leon.slice(5, 11));
 }
