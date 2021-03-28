@@ -1,5 +1,5 @@
-import styles from "../Articls/Articls.module.css";
-export type ArticalsProps = {
+import styles from "../Articles/Articles.module.css";
+export type ArticlesProps = {
   linkNameOne: string;
   linkNameTwo: string;
   linkNameThree: string;
@@ -23,10 +23,10 @@ function Articals({
   titleNameThree,
   titleNameFour,
   titleNameFive,
-}: ArticalsProps) {
+}: ArticlesProps) {
   return (
     <div className={styles.container}>
-      <div className={styles.head}>Articls</div>
+      <div className={styles.head}>Articles</div>
       <a href={titleNameOne}>
         <div className={styles.linkName}>- {linkNameOne}</div>
       </a>
