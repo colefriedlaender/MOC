@@ -20,7 +20,7 @@ export default function Settings() {
     <div className={styles.container}>
       <Head>
         <title>MOC</title>
-        <link rel="icon" href="/Icons/favicon.toilett.png" />
+        <link rel="icon" href="/Icons/favicon.money.png" />
       </Head>
       <header className={styles.header}>
         <BackButton

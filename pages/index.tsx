@@ -17,11 +17,14 @@ import Navbar from "../components/Navbar/Nabar";
 import loadingPage from "./loadingPage";
 
 const userName = "Cole Friedlaender";
-const date = "14.03.2021";
 
 export default function Home() {
   const [stocksDB, setStocksDB] = useState<MongoInfo[]>();
   const [stocksAPI, setStocksAPI] = useState<StockAPI[]>();
+  const current = new Date();
+  const date = `${current.getDate()}.${
+    current.getMonth() + 1
+  }.${current.getFullYear()}`;
 
   useEffect(() => {
     getStocksInfoMongo().then((newStocks) => {
@@ -37,14 +40,13 @@ export default function Home() {
   if (!stocksAPI) {
     return loadingPage();
   }
+
   const a1 = stocksAPI;
   const a2 = stocksDB;
   const stock = a1.map((stockAPI) => ({
     ...stockAPI,
     ...a2.find((stockDB) => stockDB.id === stockAPI.id),
   }));
-  console.log({ stock });
-
   const trackItems = stock.map((stock) => (
     <Link href={`/stocks/${stock.id}`} key={stock.id}>
       <a>
@@ -57,11 +59,23 @@ export default function Home() {
       </a>
     </Link>
   ));
+  const total =
+    stock[0].amount * stock[0].priceAPI +
+    stock[1].amount * stock[1].priceAPI +
+    stock[2].amount * stock[2].priceAPI +
+    stock[3].amount * stock[3].priceAPI +
+    stock[4].amount * stock[4].priceAPI +
+    stock[5].amount * stock[5].priceAPI +
+    stock[6].amount * stock[6].priceAPI +
+    stock[7].amount * stock[7].priceAPI +
+    stock[8].amount * stock[8].priceAPI +
+    stock[9].amount * stock[9].priceAPI +
+    stock[10].amount * stock[10].priceAPI;
   return (
     <div className={styles.container}>
       <Head>
         <title>MOC</title>
-        <link rel="icon" href="/Icons/favicon.toilett.png" />
+        <link rel="icon" href="/Icons/favicon.money.png" />
       </Head>
       <div className={styles.headerContainer}>
         <header className={styles.header}>
@@ -74,7 +88,7 @@ export default function Home() {
             </Link>
           </section>
           <section className={styles.balance}>
-            <Balance total={6789.89} returnValue={1.89} />
+            <Balance sum={total} returnValue={4.67} />
           </section>
           <section className={styles.date}>
             <SubHeadline date={date} />
