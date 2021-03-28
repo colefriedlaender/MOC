@@ -7,8 +7,8 @@ export type MongoID = {
   id: string;
 };
 export type StockAPI = {
-  id: string;
   name: string;
+  id: string;
   priceAPI: number;
   change: number;
 };
