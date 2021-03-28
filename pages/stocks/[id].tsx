@@ -15,9 +15,10 @@ import Topic from "../../components/Topic/Topic";
 import BackButton from "../../components/BackButton/BackButton";
 import loadingPage from "../loadingPage";
 import Info from "../../components/Info/Info";
+import InfoPrice from "../../components/Info/InfoPrice";
 import Perform from "../../components/Perform/Perform";
 import Navbar from "../../components/Navbar/Nabar";
-import Articals from "../../components/Articls/Articls";
+import Articles from "../../components/Articles/Articles";
 
 export default function Overview() {
   const router = useRouter();
@@ -52,12 +53,11 @@ export default function Overview() {
     return loadingPage();
   }
   const API = stockAPI[0];
-  console.log(stockAPINews[0].title);
   return (
     <div className={styles.container}>
       <Head>
         <title>MOC</title>
-        <link rel="icon" href="/Icons/favicon.png" />
+        <link rel="icon" href="/Icons/favicon.money.png" />
       </Head>
       <header className={styles.header}>
         <BackButton
@@ -77,14 +77,14 @@ export default function Overview() {
           priceAPI={API.priceAPI}
         />
         <section className={styles.info}>
-          <Info
+          <InfoPrice
             firstWord={"Current"}
             restOfPhrase={"Stock Price"}
             content={API.priceAPI}
           />
           <Info
-            firstWord={"Yearly"}
-            restOfPhrase={"Return Rate"}
+            firstWord={"Percent"}
+            restOfPhrase={"OF Change"}
             content={API.change}
           />
         </section>
@@ -95,7 +95,7 @@ export default function Overview() {
             "Compared to the MSCI World Equity the Stock performs"
           }
         />
-        <Articals
+        <Articles
           linkNameOne={stockAPINews[0].title}
           linkNameTwo={stockAPINews[1].title}
           linkNameThree={stockAPINews[2].title}
