@@ -24,3 +24,17 @@
   align-self: start;
   justify-self: center;
 }
+.percent {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--positive-color);
+  align-self: start;
+  justify-self: center;
+}
+.percentNeg {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: red;
+  align-self: start;
+  justify-self: center;
+}

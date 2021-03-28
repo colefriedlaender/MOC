@@ -13,7 +13,9 @@ function Info({ firstWord, restOfPhrase, content }: InfoProps) {
         {firstWord}
         <span className={styles.restOfPhrase}>{restOfPhrase}</span>
       </div>
-      <div className={styles.information}>{shortcontent}%</div>
+      <div className={content < 0 ? styles.percentNeg : styles.percent}>
+        {shortcontent}%
+      </div>
     </div>
   );
 }
