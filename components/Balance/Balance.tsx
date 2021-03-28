@@ -1,16 +1,21 @@
 import styles from "../Balance/Balance.module.css";
 
 export type BalanceProps = {
-  total: number;
+  sum: number;
   returnValue: number;
 };
 
-function Balance({ total, returnValue }: BalanceProps) {
+function Balance({ sum, returnValue }: BalanceProps) {
+  const total = sum.toFixed(2);
   return (
     <div className={styles.container}>
       <div className={styles.head}>Balance</div>
       <div className={styles.total}>${total}</div>
-      <div className={styles.returnValue}>+{returnValue}%</div>
+      <div
+        className={returnValue > 0 ? styles.returnValue : styles.returnValueNeg}
+      >
+        {returnValue}%
+      </div>
     </div>
   );
 }

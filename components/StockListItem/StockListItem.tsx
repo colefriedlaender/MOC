@@ -13,10 +13,13 @@ function StockListItem({ amount, price, priceAPI, stockName }: StockProps) {
   const sum2 = sum1 / price;
   const sum3 = sum2 * 100;
   const rate = sum3.toFixed(2);
+
   return (
     <div className={styles.container}>
       <div className={styles.stockName}>{stockName}</div>
-      <div className={styles.stockRate}>{rate}%</div>
+      <div className={sum3 < 0 ? styles.stockRateNeg : styles.stockRate}>
+        {rate}%
+      </div>
       <div className={styles.amount}>
         {amount} x ${price}
       </div>
