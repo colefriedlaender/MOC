@@ -22,7 +22,7 @@ async function fetchURL<T>(url: string): Promise<T> {
 }
 
 export async function getStocksInfoMongo(): Promise<MongoInfo[]> {
-  return await fetchURL<MongoInfo[]>("/api/userName");
+  return await fetchURL<MongoInfo[]>("/api/stocks");
 }
 export async function getStockInfoMongo(id: string): Promise<MongoInfo> {
   return await fetchURL<MongoInfo>(`/api/stocks/${id}`);
