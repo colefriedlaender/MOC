@@ -4,7 +4,7 @@
   display: grid;
   grid-template-rows: 28% 1fr 55px;
 }
-@media only screen and (max-height: 630px) {
+@media only screen and (max-height: 750px) {
   .container {
     grid-template-rows: 38% 1fr 55px;
   }
