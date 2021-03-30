@@ -6,6 +6,11 @@
 }
 @media only screen and (max-height: 750px) {
   .container {
+    grid-template-rows: 34% 1fr 55px;
+  }
+}
+@media only screen and (max-height: 625px) {
+  .container {
     grid-template-rows: 38% 1fr 55px;
   }
 }
