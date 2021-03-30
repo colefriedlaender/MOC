@@ -1,0 +1,31 @@
+.container {
+  background-color: var(--background-color);
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 15% 1fr 10%;
+}
+
+.header {
+  justify-self: center;
+  display: grid;
+  width: 90%;
+  height: 100%;
+  padding-top: 1em;
+  align-items: center;
+  justify-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.topic {
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+}
+.main {
+  justify-self: center;
+  align-self: flex-start;
+  display: grid;
+  grid-template-rows: 25% 1fr;
+  width: 90%;
+  height: 100%;
+}
