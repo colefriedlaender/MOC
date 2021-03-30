@@ -16,6 +16,15 @@ export type NewsAPI = {
   title: string;
   link: string;
 };
+export type SearchAPI = {
+  id: string;
+  name: string;
+  price: number;
+};
+export type StockPrice = {
+  id: string;
+  name: string;
+};
 async function fetchURL<T>(url: string): Promise<T> {
   const response = await fetch(url);
   return await response.json();
@@ -33,8 +42,8 @@ export async function getStocksInfoAPI(): Promise<StockAPI[]> {
 export async function getStockInfoAPI(id: string): Promise<StockAPI> {
   return await fetchURL<StockAPI>(`/api/FMP/${id}`);
 }
-export async function getStockBySearch(id: string): Promise<NewsAPI[]> {
-  return await fetchURL<NewsAPI[]>(`/api/FMP/search/${id}`);
+export async function getStockBySearch(id: string): Promise<SearchAPI[]> {
+  return await fetchURL<SearchAPI[]>(`/api/FMP/search/${id}`);
 }
 export async function getStockInfoAPINews(id: string): Promise<NewsAPI[]> {
   return await fetchURL<NewsAPI[]>(`/api/yahoo/${id}`);
