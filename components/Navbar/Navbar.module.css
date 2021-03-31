@@ -1,5 +1,12 @@
 .container {
   background-color: var(--main-color);
   height: 55px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   border-radius: 20px 20px 0 0;
+}
+.icon {
+  cursor: pointer;
 }
