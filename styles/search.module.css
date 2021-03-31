@@ -2,7 +2,7 @@
   background-color: var(--background-color);
   display: grid;
   height: 100vh;
-  grid-template-rows: 15% 1fr 10%;
+  grid-template-rows: 15% 1fr 55px;
 }
 
 .header {
@@ -28,4 +28,8 @@
   grid-template-rows: 25% 1fr;
   width: 90%;
   height: 100%;
+}
+.footerContainer {
+  position: sticky;
+  bottom: 0;
 }

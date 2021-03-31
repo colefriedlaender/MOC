@@ -1,17 +1,16 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import Loading from "../components/Loading/Loading";
+import Navbar from "../components/Navbar/Nabar";
 import Search from "../components/Search/Search";
 import Headline from "../components/SubHeadline/Headline";
 import Suggestion from "../components/Suggestion/Suggestion";
 import Topic from "../components/Topic/Topic";
-import useDebounce from "../hooks/useDebounce";
 import styles from "../styles/search.module.css";
 import { getStockBySearch, SearchAPI } from "../utils/api";
-import loadingPage from "./loadingPage";
 export default function SearchPage() {
   const [id, setId] = useState("A");
   const [stock, setStock] = useState<SearchAPI[]>();
-  const debounceSearch = useDebounce(id, 500);
 
   const onChange = (e) => {
     setId(e.target.value);
@@ -22,20 +21,23 @@ export default function SearchPage() {
       return;
     }
     alert(id);
-    e.target.reset();
+    setId(e.target.value);
   }
   useEffect(() => {
-    getStockBySearch(id).then((newStock) => {
-      setStock(newStock);
-    });
+    const timeoutId = setTimeout(() => {
+      getStockBySearch(id).then((newStock) => {
+        setStock(newStock);
+        console.log(stock);
+      });
+    }, 300);
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [id]);
   if (!stock) {
-    return loadingPage();
+    return <Loading />;
   }
-  if (!debounceSearch) {
-    return;
-  }
-  console.log(stock);
+
   const searchItems = stock.map((suggestion) => (
     <Suggestion
       name={suggestion.name}
@@ -43,6 +45,9 @@ export default function SearchPage() {
       key={suggestion.id}
     />
   ));
+  async function handleClick() {
+    alert("This function will come soon");
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -65,7 +70,9 @@ export default function SearchPage() {
           <div>{searchItems}</div>
         </section>
       </main>
-      <footer className={styles.footer}></footer>
+      <div className={styles.footerContainer}>
+        <Navbar onClick={handleClick} />
+      </div>
     </div>
   );
 }
