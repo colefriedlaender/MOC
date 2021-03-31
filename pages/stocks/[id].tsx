@@ -13,12 +13,12 @@ import styles from "../../styles/id.module.css";
 import { useRouter } from "next/dist/client/router";
 import Topic from "../../components/Topic/Topic";
 import BackButton from "../../components/BackButton/BackButton";
-import loadingPage from "../loadingPage";
 import Info from "../../components/Info/Info";
 import InfoPrice from "../../components/Info/InfoPrice";
 import Perform from "../../components/Perform/Perform";
-import Navbar from "../../components/Navbar/Nabar";
+import Navbar, { onClick } from "../../components/Navbar/Nabar";
 import Articles from "../../components/Articles/Articles";
+import Loading from "../../components/Loading/Loading";
 
 export default function Overview() {
   const router = useRouter();
@@ -43,14 +43,14 @@ export default function Overview() {
     });
   }, [id]);
   if (!stockDB) {
-    return loadingPage();
+    return <Loading />;
   }
 
   if (!stockAPI) {
-    return loadingPage();
+    return <Loading />;
   }
   if (!stockAPINews) {
-    return loadingPage();
+    return <Loading />;
   }
   const API = stockAPI[0];
   return (
@@ -109,7 +109,7 @@ export default function Overview() {
         />
       </main>
       <footer className={styles.footer}>
-        <Navbar />
+        <Navbar onClick={onClick} />
       </footer>
     </div>
   );
