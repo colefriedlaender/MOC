@@ -1,7 +1,7 @@
 import styles from "../Suggestion/Suggestion.module.css";
 export type SuggestionProps = {
   name: string;
-  price: number;
+  price: number | null;
 };
 function Suggestion({ name, price }: SuggestionProps) {
   return (

@@ -1,5 +1,19 @@
 .container {
   background-color: var(--main-color);
   height: 55px;
+  display: grid;
+  grid-template-rows: 55px;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   border-radius: 20px 20px 0 0;
+}
+.icon {
+  cursor: pointer;
+}
+.circle {
+  background-color: #a2b2c9;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }

@@ -4,7 +4,12 @@
   display: grid;
   grid-template-rows: 28% 1fr 55px;
 }
-@media only screen and (max-height: 630px) {
+@media only screen and (max-height: 750px) {
+  .container {
+    grid-template-rows: 34% 1fr 55px;
+  }
+}
+@media only screen and (max-height: 625px) {
   .container {
     grid-template-rows: 38% 1fr 55px;
   }
@@ -47,7 +52,8 @@
   height: 100%;
 }
 .footerContainer {
-  position: sticky;
+  width: 100vw;
+  position: fixed;
   bottom: 0;
 }
 .date {

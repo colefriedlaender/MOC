@@ -13,12 +13,14 @@ import {
   StockAPI,
 } from "../utils/api";
 import Link from "next/link";
-import Navbar from "../components/Navbar/Nabar";
-import loadingPage from "./loadingPage";
+import Navbar, { onClick } from "../components/Navbar/Nabar";
+import Loading from "../components/Loading/Loading";
+import { useRouter } from "next/dist/client/router";
 
 const userName = "Cole Friedlaender";
 
 export default function Home() {
+  const router = useRouter();
   const [stocksDB, setStocksDB] = useState<MongoInfo[]>();
   const [stocksAPI, setStocksAPI] = useState<StockAPI[]>();
   const current = new Date();
@@ -35,10 +37,10 @@ export default function Home() {
     });
   }, []);
   if (!stocksDB) {
-    return loadingPage();
+    return <Loading />;
   }
   if (!stocksAPI) {
-    return loadingPage();
+    return <Loading />;
   }
 
   const a1 = stocksAPI;
@@ -103,7 +105,7 @@ export default function Home() {
         </main>
       </div>
       <div className={styles.footerContainer}>
-        <Navbar />
+        <Navbar onClick={onClick} page={router.pathname} />
       </div>
     </div>
   );
