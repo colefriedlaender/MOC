@@ -109,7 +109,7 @@ export default function Overview() {
         />
       </main>
       <footer className={styles.footer}>
-        <Navbar onClick={onClick} />
+        <Navbar onClick={onClick} page={router.pathname} />
       </footer>
     </div>
   );

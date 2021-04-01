@@ -105,7 +105,7 @@ export default function Home() {
         </main>
       </div>
       <div className={styles.footerContainer}>
-        <Navbar onClick={onClick} activeButton={router.pathname} />
+        <Navbar onClick={onClick} page={router.pathname} />
       </div>
     </div>
   );

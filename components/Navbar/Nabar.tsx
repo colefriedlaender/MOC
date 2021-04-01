@@ -4,10 +4,10 @@ import { MouseEventHandler } from "react";
 import styles from "../Navbar/Navbar.module.css";
 export type NavbarProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
-  activeButton: string;
+  page: string;
 };
 
-function Navbar({ onClick, activeButton }: NavbarProps) {
+function Navbar({ onClick, page }: NavbarProps) {
   const router = useRouter();
   console.log(router.pathname);
   return (
@@ -17,7 +17,7 @@ function Navbar({ onClick, activeButton }: NavbarProps) {
           <img
             className={styles.icon}
             src={
-              activeButton === "/searchPage"
+              page === "/searchPage"
                 ? "/Icons/add.circle.svg"
                 : "/Icons/add.svg"
             }
@@ -29,11 +29,7 @@ function Navbar({ onClick, activeButton }: NavbarProps) {
         <a>
           <img
             className={styles.icon}
-            src={
-              activeButton === "/"
-                ? "/Icons/home.circle.svg"
-                : "/Icons/home.svg"
-            }
+            src={page === "/" ? "/Icons/home.circle.svg" : "/Icons/home.svg"}
             alt="Home Button"
           />
         </a>

@@ -74,7 +74,7 @@ export default function SearchPage() {
         </section>
       </main>
       <div className={styles.footerContainer}>
-        <Navbar onClick={handleClick} activeButton={router.pathname} />
+        <Navbar onClick={handleClick} page={router.pathname} />
       </div>
     </div>
   );
