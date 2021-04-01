@@ -1,4 +1,3 @@
-import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import { MouseEventHandler } from "react";
 import styles from "../Navbar/Navbar.module.css";
@@ -8,8 +7,6 @@ export type NavbarProps = {
 };
 
 function Navbar({ onClick, page }: NavbarProps) {
-  const router = useRouter();
-  console.log(router.pathname);
   return (
     <div className={styles.container}>
       <Link href={`/searchPage`}>
