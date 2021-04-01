@@ -30,9 +30,8 @@ export default function SearchPage() {
     const timeoutId = setTimeout(() => {
       getStockBySearch(id).then((newStock) => {
         setStock(newStock);
-        console.log(stock);
       });
-    }, 300);
+    }, 400);
     return () => {
       clearTimeout(timeoutId);
     };
