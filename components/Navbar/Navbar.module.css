@@ -2,7 +2,6 @@
   background-color: var(--main-color);
   height: 55px;
   display: grid;
-  grid-template-rows: 55px;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
