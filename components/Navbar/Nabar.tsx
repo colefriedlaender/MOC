@@ -1,23 +1,39 @@
+import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import { MouseEventHandler } from "react";
 import styles from "../Navbar/Navbar.module.css";
 export type NavbarProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
+  activeButton: string;
 };
 
-function Navbar({ onClick }: NavbarProps) {
+function Navbar({ onClick, activeButton }: NavbarProps) {
+  const router = useRouter();
+  console.log(router.pathname);
   return (
     <div className={styles.container}>
       <Link href={`/searchPage`}>
         <a>
-          <img className={styles.icon} src="/Icons/add.svg" alt="Add Button" />
+          <img
+            className={styles.icon}
+            src={
+              activeButton === "/searchPage"
+                ? "/Icons/add.circle.svg"
+                : "/Icons/add.svg"
+            }
+            alt="Add Button"
+          />
         </a>
       </Link>
       <Link href={`/`}>
         <a>
           <img
             className={styles.icon}
-            src="/Icons/home.svg"
+            src={
+              activeButton === "/"
+                ? "/Icons/home.circle.svg"
+                : "/Icons/home.svg"
+            }
             alt="Home Button"
           />
         </a>

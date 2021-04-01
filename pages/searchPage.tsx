@@ -1,4 +1,6 @@
+import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading/Loading";
 import Navbar from "../components/Navbar/Nabar";
@@ -9,6 +11,7 @@ import Topic from "../components/Topic/Topic";
 import styles from "../styles/search.module.css";
 import { getStockBySearch, SearchAPI } from "../utils/api";
 export default function SearchPage() {
+  const router = useRouter();
   const [id, setId] = useState("A");
   const [stock, setStock] = useState<SearchAPI[]>();
 
@@ -39,11 +42,11 @@ export default function SearchPage() {
   }
 
   const searchItems = stock.map((suggestion) => (
-    <Suggestion
-      name={suggestion.name}
-      price={suggestion.price}
-      key={suggestion.id}
-    />
+    <Link href={`/search/${suggestion.id}`} key={suggestion.id}>
+      <a>
+        <Suggestion name={suggestion.name} price={suggestion.price} />
+      </a>
+    </Link>
   ));
   async function handleClick() {
     alert("This function will come soon");
@@ -71,7 +74,7 @@ export default function SearchPage() {
         </section>
       </main>
       <div className={styles.footerContainer}>
-        <Navbar onClick={handleClick} />
+        <Navbar onClick={handleClick} activeButton={router.pathname} />
       </div>
     </div>
   );

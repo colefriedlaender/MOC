@@ -30,6 +30,7 @@
   height: 100%;
 }
 .footerContainer {
-  position: sticky;
+  width: 100vw;
+  position: fixed;
   bottom: 0;
 }

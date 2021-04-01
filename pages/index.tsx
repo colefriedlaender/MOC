@@ -15,10 +15,12 @@ import {
 import Link from "next/link";
 import Navbar, { onClick } from "../components/Navbar/Nabar";
 import Loading from "../components/Loading/Loading";
+import { useRouter } from "next/dist/client/router";
 
 const userName = "Cole Friedlaender";
 
 export default function Home() {
+  const router = useRouter();
   const [stocksDB, setStocksDB] = useState<MongoInfo[]>();
   const [stocksAPI, setStocksAPI] = useState<StockAPI[]>();
   const current = new Date();
@@ -103,7 +105,7 @@ export default function Home() {
         </main>
       </div>
       <div className={styles.footerContainer}>
-        <Navbar onClick={onClick} />
+        <Navbar onClick={onClick} activeButton={router.pathname} />
       </div>
     </div>
   );
