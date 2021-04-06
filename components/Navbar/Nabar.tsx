@@ -1,12 +1,10 @@
 import Link from "next/link";
-import { MouseEventHandler } from "react";
 import styles from "../Navbar/Navbar.module.css";
 export type NavbarProps = {
-  onClick: MouseEventHandler<HTMLImageElement>;
   page: string;
 };
 
-function Navbar({ onClick, page }: NavbarProps) {
+function Navbar({ page }: NavbarProps) {
   return (
     <div className={styles.container}>
       <Link href={`/searchPage`}>
@@ -22,26 +20,33 @@ function Navbar({ onClick, page }: NavbarProps) {
           />
         </a>
       </Link>
-      <Link href={`/`}>
+      <Link href={`/portfolio`}>
         <a>
           <img
             className={styles.icon}
-            src={page === "/" ? "/Icons/home.circle.svg" : "/Icons/home.svg"}
+            src={
+              page === "/portfolio"
+                ? "/Icons/home.circle.svg"
+                : "/Icons/home.svg"
+            }
             alt="Home Button"
           />
         </a>
       </Link>
-      <img
-        className={styles.icon}
-        src="/Icons/community.svg"
-        alt="Community Button"
-        onClick={onClick}
-      />
+      <Link href={`/community`}>
+        <a>
+          <img
+            className={styles.icon}
+            src={
+              page === "/community"
+                ? "/Icons/community.circle.svg"
+                : "/Icons/community.svg"
+            }
+            alt="Home Button"
+          />
+        </a>
+      </Link>
     </div>
   );
 }
 export default Navbar;
-
-export function onClick() {
-  return alert("This function will come soon");
-}
