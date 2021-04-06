@@ -1,14 +1,16 @@
+import { MouseEventHandler } from "react";
 import styles from "../SubmitButton/SubmitButton.module.css";
 
 export type SubmitButtonProps = {
   content: string;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
-function SubmittButton({ content }: SubmitButtonProps) {
+function SubmittButton({ content, onClick }: SubmitButtonProps) {
   return (
-    <div className={styles.container}>
+    <button className={styles.container} type={"submit"} onClick={onClick}>
       <div className={styles.topic}>{content}</div>
-    </div>
+    </button>
   );
 }
 
