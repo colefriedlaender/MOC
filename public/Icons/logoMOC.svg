@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="206.567" height="92.391" viewBox="0 0 206.567 92.391">
+  <g id="logo-group" transform="translate(-159.452 -282.787)">
+    <g id="logo-center" transform="translate(159.452 282.787)">
+      <g id="title">
+        <g id="path196442" transform="translate(0 0.501)">
+          <path id="Pfad_1" data-name="Pfad 1" d="M163.682,176.622l23.771,50.34-3.7,7.884h-4.8l-23.954-50.728h0c-1.8-3.819-3.563-7.5-7.382-7.5h16.069Zm52.237,50.728V184.119c0-3.819,3.1-7.5,6.914-7.5H197.36c3.819,0,6.914,3.678,6.914,7.5V227.35c0,3.819-3.1,7.5-6.914,7.5h25.473C219.015,234.846,215.919,231.169,215.919,227.35Zm-60.81,0h-.582c0,3.819-3.1,7.5-6.914,7.5h14.411C158.2,234.846,155.109,231.169,155.109,227.35Z" transform="translate(-147.613 -176.622)" fill="#4067a1" stroke="#4067a1" stroke-miterlimit="2" stroke-width="0"/>
+        </g>
+        <g id="path196444" transform="translate(84.8)">
+          <path id="Pfad_2" data-name="Pfad 2" d="M185.622,204.329c0,16.078,4.752,29.694,14.919,29.694-16.443,0-27.146-10.634-27.146-29.694s10.7-29.694,27.146-29.694C190.374,174.635,185.622,188.251,185.622,204.329Zm20.742-29.694c10.167,0,14.919,13.616,14.919,29.694s-4.752,29.694-14.919,29.694c16.443,0,27.146-10.634,27.146-29.694S222.807,174.635,206.364,174.635Z" transform="translate(-173.395 -174.635)" fill="#4067a1" stroke="#4067a1" stroke-miterlimit="2" stroke-width="0"/>
+        </g>
+        <g id="path196446" transform="translate(158.78)">
+          <path id="Pfad_3" data-name="Pfad 3" d="M206.663,204.329c0,16.078,4.752,29.694,14.919,29.694-16.444,0-27.146-10.634-27.146-29.694s10.7-29.694,27.146-29.694C211.415,174.635,206.663,188.251,206.663,204.329ZM227.4,234.023a32,32,0,0,0,8.961-1.206c3.013-.831,5.3-.995,5.3,1.206V218.2C239.578,227.278,234.4,234.023,227.4,234.023Z" transform="translate(-194.436 -174.635)" fill="#4067a1" stroke="#4067a1" stroke-miterlimit="2" stroke-width="0"/>
+          <path id="Pfad_4" data-name="Pfad 4" d="M323.6,185.229a7.036,7.036,0,1,1-7.036-7.036A7.036,7.036,0,0,1,323.6,185.229Z" transform="translate(-275.811 -177.151)" fill="#a2b2c9" stroke="#a2b2c9" stroke-miterlimit="2" stroke-width="0"/>
+        </g>
+      </g>
+    </g>
+    <text id="Think_BIG" data-name="Think BIG" transform="translate(215.236 371.178)" fill="#a2b2c9" font-size="20" font-family="HelveticaNeue, Helvetica Neue" letter-spacing="0.05em"><tspan x="0" y="0">Think BIG</tspan></text>
+  </g>
+</svg>
