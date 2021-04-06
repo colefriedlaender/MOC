@@ -1,0 +1,32 @@
+.container {
+  background-color: var(--background-color);
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 35% 1fr;
+}
+
+.header {
+  padding-top: 15%;
+  align-self: center;
+  justify-self: center;
+}
+.topic {
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+}
+.main {
+  padding-top: 15%;
+  justify-self: center;
+  display: grid;
+  width: 90%;
+  height: 60%;
+  row-gap: 5%;
+}
+.loading {
+  align-self: center;
+  justify-content: center;
+}
+.form {
+  row-gap: 5%;
+}
