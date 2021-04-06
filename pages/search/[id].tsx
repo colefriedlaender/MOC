@@ -37,7 +37,7 @@ export default function Overview() {
       amount: amount,
       price: price,
     });
-    router.push("/");
+    router.push("/portfolio");
   };
 
   return (

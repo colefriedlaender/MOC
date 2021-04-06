@@ -1,0 +1,14 @@
+.container {
+  background-color: var(--background-color);
+  display: grid;
+  height: 100vh;
+}
+
+.main {
+  justify-items: center;
+  align-items: center;
+  justify-self: center;
+  display: grid;
+  height: 60%;
+  height: 100%;
+}
