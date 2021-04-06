@@ -5,11 +5,11 @@ export type BackButtonProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
 };
 
-function BackButton({ onClick }: BackButtonProps) {
+function DeleteButton({ onClick }: BackButtonProps) {
   return (
     <div className={styles.btn}>
-      <img src="/Icons/material-back.svg" alt="Back Button" onClick={onClick} />
+      <img src="/Icons/trash.svg" alt="Delete Button" onClick={onClick} />
     </div>
   );
 }
-export default BackButton;
+export default DeleteButton;

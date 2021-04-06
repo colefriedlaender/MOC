@@ -8,13 +8,12 @@
 .header {
   justify-self: center;
   display: grid;
-  grid-template-columns: 10% 1fr;
+  grid-template-columns: 10% 1fr 10%;
   width: 90%;
   height: 100%;
   padding-top: 1em;
   align-items: center;
   justify-items: center;
-  padding-right: 10%;
 }
 .topic {
   width: 50%;
