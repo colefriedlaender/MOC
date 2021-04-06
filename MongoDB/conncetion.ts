@@ -11,7 +11,7 @@ let db = null;
 
 const url = process.env.MONGODB_URL;
 
-export const user = "Leon Machens";
+export const user = "Cole Friedlaender";
 
 type Handler = (req: NextApiRequest, res: NextApiResponse) => void;
 
@@ -50,6 +50,17 @@ export async function createNewStock(userName, stockPost) {
     { userName: userName },
     {
       $addToSet: {
+        stocks: stockPost,
+      },
+    }
+  );
+}
+export async function deleteNewStock(userName, stockPost) {
+  const userCollection = await getCollection("userName");
+  return await userCollection.updateOne(
+    { userName: userName },
+    {
+      $pull: {
         stocks: stockPost,
       },
     }
