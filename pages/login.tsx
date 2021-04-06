@@ -16,8 +16,6 @@ export default function Login() {
   const onChangePassword = (e) => {
     setPassword(e.target.value);
   };
-  console.log(password);
-  console.log(email);
   const handleSubmit = () => {
     if (email == "colefriedlaender@outlook.de" && password == 1234) {
       router.push("/portfolio");
