@@ -19,10 +19,10 @@ export default function Login() {
   console.log(password);
   console.log(email);
   const handleSubmit = () => {
-    // if (email == "colefriedlaender@outlook.de" && password == 1234) {
-    router.push("/portfolio");
-    // }
-    // return alert("The password is wrong");
+    if (email == "colefriedlaender@outlook.de" && password == 1234) {
+      router.push("/portfolio");
+    }
+    return alert("The password is wrong");
   };
 
   return (
