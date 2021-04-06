@@ -25,6 +25,9 @@ export type StockPrice = {
   id: string;
   name: string;
 };
+export type StockName = {
+  name: string;
+};
 async function fetchURL<T>(url: string): Promise<T> {
   const response = await fetch(url);
   return await response.json();
@@ -42,6 +45,9 @@ export async function getStocksInfoAPI(): Promise<StockAPI[]> {
 export async function getStockInfoAPI(id: string): Promise<StockAPI> {
   return await fetchURL<StockAPI>(`/api/FMP/${id}`);
 }
+export async function getStockInfoAPIName(id: string): Promise<StockName> {
+  return await fetchURL<StockName>(`/api/FMP/${id}`);
+}
 export async function getStockBySearch(id: string): Promise<SearchAPI[]> {
   return await fetchURL<SearchAPI[]>(`/api/FMP/search/${id}`);
 }
@@ -54,3 +60,17 @@ export async function deleteStock(id: string) {
     method: "DELETE",
   });
 }
+export const postStock = async (post) => {
+  const res = await fetch(`/api/stockList`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify(post),
+  });
+
+  const data = await res.json();
+
+  return data;
+};

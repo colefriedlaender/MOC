@@ -69,45 +69,47 @@ export default function Overview() {
           <Topic topic={"Overview"} />
         </section>
       </header>
-      <main className={styles.main}>
-        <StockListItem
-          amount={stockDB.amount}
-          price={stockDB.price}
-          stockName={API.name}
-          priceAPI={API.priceAPI}
-        />
-        <section className={styles.info}>
-          <InfoPrice
-            firstWord={"Current"}
-            restOfPhrase={"Stock Price"}
-            content={API.priceAPI}
+      <div className={styles.mainContainer}>
+        <main className={styles.main}>
+          <StockListItem
+            amount={stockDB.amount}
+            price={stockDB.price}
+            stockName={API.name}
+            priceAPI={API.priceAPI}
           />
-          <Info
-            firstWord={"Percent"}
-            restOfPhrase={"OF Change"}
-            content={API.change}
+          <section className={styles.info}>
+            <InfoPrice
+              firstWord={"Current"}
+              restOfPhrase={"Stock Price"}
+              content={API.priceAPI}
+            />
+            <Info
+              firstWord={"Percent"}
+              restOfPhrase={"OF Change"}
+              content={API.change}
+            />
+          </section>
+          <Perform
+            head={"Performance"}
+            performanceRate={"4,56"}
+            performanceText={
+              "Compared to the MSCI World Equity the Stock performs"
+            }
           />
-        </section>
-        <Perform
-          head={"Performance"}
-          performanceRate={"4,56"}
-          performanceText={
-            "Compared to the MSCI World Equity the Stock performs"
-          }
-        />
-        <Articles
-          linkNameOne={stockAPINews[0].title}
-          linkNameTwo={stockAPINews[1].title}
-          linkNameThree={stockAPINews[2].title}
-          linkNameFour={stockAPINews[3].title}
-          linkNameFive={stockAPINews[4].title}
-          titleNameOne={stockAPINews[0].link}
-          titleNameTwo={stockAPINews[1].link}
-          titleNameThree={stockAPINews[2].link}
-          titleNameFour={stockAPINews[3].link}
-          titleNameFive={stockAPINews[4].link}
-        />
-      </main>
+          <Articles
+            linkNameOne={stockAPINews[0].title}
+            linkNameTwo={stockAPINews[1].title}
+            linkNameThree={stockAPINews[2].title}
+            linkNameFour={stockAPINews[3].title}
+            linkNameFive={stockAPINews[4].title}
+            titleNameOne={stockAPINews[0].link}
+            titleNameTwo={stockAPINews[1].link}
+            titleNameThree={stockAPINews[2].link}
+            titleNameFour={stockAPINews[3].link}
+            titleNameFive={stockAPINews[4].link}
+          />
+        </main>
+      </div>
       <footer className={styles.footer}>
         <Navbar onClick={onClick} page={router.pathname} />
       </footer>
