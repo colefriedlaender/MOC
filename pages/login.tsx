@@ -16,11 +16,15 @@ export default function Login() {
   const onChangePassword = (e) => {
     setPassword(e.target.value);
   };
+  console.log(email);
+  console.log(password);
   const handleSubmit = () => {
-    if (email == "colefriedlaender@outlook.de" && password == 1234) {
-      router.push("/portfolio");
-    }
-    return alert("The password is wrong");
+    // if (email == "colefriedlaender@outlook.de" && password == 1234) {
+    //   router.push("/portfolio");
+    // } else {
+    //   return alert("The password is wrong");
+    // }
+    router.push("/portfolio");
   };
 
   return (

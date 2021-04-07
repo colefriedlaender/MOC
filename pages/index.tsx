@@ -17,7 +17,7 @@ export default function Welcome() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       router.push("/login");
-    }, 3000);
+    }, 2000);
     return () => {
       clearTimeout(timeoutId);
     };
