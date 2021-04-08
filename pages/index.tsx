@@ -23,6 +23,27 @@ export default function Welcome() {
     };
   }, []);
 
+
+  const a1 = stocksAPI;
+  const a2 = stocksDB;
+  const stock = a1.map((stockAPI) => ({
+    ...stockAPI,
+    ...a2.find((stockDB) => stockDB.id === stockAPI.id),
+  }));
+  const trackItems = stock.map((stock) => (
+    <Link href={`/stocks/${stock.id}`} key={stock.id}>
+      <a>
+        <StockListItem
+          amount={stock.amount}
+          price={stock.price}
+          stockName={stock.name}
+          priceAPI={stock.priceAPI}
+        />
+      </a>
+    </Link>
+  ));
+  const total = 1000;
+
   return (
     <div className={styles.container}>
       <Head>

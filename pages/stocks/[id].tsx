@@ -19,6 +19,8 @@ import Perform from "../../components/Perform/Perform";
 import Navbar from "../../components/Navbar/Nabar";
 import Articles from "../../components/Articles/Articles";
 import Loading from "../../components/Loading/Loading";
+import DeleteButton from "../../components/BackButton/DeleteButton";
+import { deleteStock } from "../../utils/api";
 
 export default function Overview() {
   const router = useRouter();
@@ -52,6 +54,17 @@ export default function Overview() {
   if (!stockAPINews) {
     return <Loading />;
   }
+  const removeStock = async () => {
+    if (!confirm("DO YOU WANT TO DELTE THE STOCK?")) {
+      return;
+    }
+    await deleteStock({
+      id: id,
+      amount: stockDB.amount,
+      price: stockDB.price,
+    });
+    router.push("/");
+  };
   const API = stockAPI[0];
   return (
     <div className={styles.container}>
@@ -68,6 +81,7 @@ export default function Overview() {
         <section className={styles.topic}>
           <Topic topic={"Overview"} />
         </section>
+        <DeleteButton onClick={removeStock} />
       </header>
       <div className={styles.mainContainer}>
         <main className={styles.main}>

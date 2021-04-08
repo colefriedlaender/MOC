@@ -55,13 +55,22 @@ export async function getStockInfoAPINews(id: string): Promise<NewsAPI[]> {
   return await fetchURL<NewsAPI[]>(`/api/yahoo/${id}`);
 }
 
-export async function deleteStock(id: string) {
-  await fetch(`/api/tracks/${id}`, {
-    method: "DELETE",
-  });
-}
 export const postStock = async (post) => {
   const res = await fetch(`/api/stockList`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify(post),
+  });
+
+  const data = await res.json();
+
+  return data;
+};
+export const deleteStock = async (post) => {
+  const res = await fetch(`/api/stockList/delete`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
