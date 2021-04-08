@@ -5,9 +5,10 @@ import LoginEmail from "../components/LoginEmail/LoginEmail";
 import LoginPassword from "../components/LoginPassword/LoginPassword";
 import SubmittButton from "../components/SubmitButton/SubmitButton";
 import styles from "../styles/login.module.css";
+export const currentPassword = 1234;
 export default function Login() {
-  const [email, setEmail] = useState(null);
-  const [password, setPassword] = useState(null);
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const router = useRouter();
 
   const onChangeEmail = (e) => {
@@ -19,11 +20,11 @@ export default function Login() {
   console.log(email);
   console.log(password);
   const handleSubmit = () => {
-    // if (email == "colefriedlaender@outlook.de" && password == 1234) {
-    //   router.push("/portfolio");
-    // } else {
-    //   return alert("The password is wrong");
-    // }
+    if (password == currentPassword) {
+      router.push("/portfolio");
+    } else {
+      return alert("The password is wrong");
+    }
     router.push("/portfolio");
   };
 
@@ -38,7 +39,11 @@ export default function Login() {
       </header>
       <main className={styles.main}>
         <LoginEmail name={"Email Adress"} onChange={onChangeEmail} />
-        <LoginPassword name={"Password"} onChange={onChangePassword} />
+        <LoginPassword
+          name={"Password"}
+          onChange={onChangePassword}
+          value={password}
+        />
         <SubmittButton onClick={handleSubmit} content={"LOGIN"} />
       </main>
       <footer className={styles.footer}></footer>
