@@ -61,18 +61,15 @@ export default function Home() {
       </a>
     </Link>
   ));
-  const total =
-    stock[0].amount * stock[0].priceAPI +
-    stock[1].amount * stock[1].priceAPI +
-    stock[2].amount * stock[2].priceAPI +
-    stock[3].amount * stock[3].priceAPI +
-    stock[4].amount * stock[4].priceAPI +
-    stock[5].amount * stock[5].priceAPI +
-    stock[6].amount * stock[6].priceAPI +
-    stock[7].amount * stock[7].priceAPI +
-    stock[8].amount * stock[8].priceAPI +
-    stock[9].amount * stock[9].priceAPI +
-    stock[10].amount * stock[10].priceAPI;
+  let total = 0;
+  for (let i = 0; i < stock.length; i++) {
+    total = total + stock[i].amount * stock[i].priceAPI;
+  }
+  let rate = 0;
+  for (let i = 0; i < stock.length; i++) {
+    rate = rate + stock[i].priceAPI - stock[i].price;
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -90,7 +87,7 @@ export default function Home() {
             </Link>
           </section>
           <section className={styles.balance}>
-            <Balance sum={total} returnValue={4.67} />
+            <Balance sum={total} returnValue={rate} />
           </section>
           <section className={styles.date}>
             <SubHeadline date={date} />

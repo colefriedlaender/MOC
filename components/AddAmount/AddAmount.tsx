@@ -3,7 +3,7 @@ import styles from "../AddAmount/AddAmount.module.css";
 export type AddProps = {
   onClick: MouseEventHandler<HTMLImageElement>;
   onChange: ChangeEventHandler<HTMLInputElement>;
-  value: string;
+  value: number;
 };
 function AddAmount({ onClick, onChange, value }: AddProps) {
   return (
