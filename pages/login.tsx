@@ -19,6 +19,7 @@ export default function Login() {
   };
   console.log(email);
   console.log(password);
+  console.log(`Use the password "${currentPassword}" to enter`);
   const handleSubmit = () => {
     if (password == currentPassword) {
       router.push("/portfolio");
