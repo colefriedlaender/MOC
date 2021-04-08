@@ -16,7 +16,7 @@ import BackButton from "../../components/BackButton/BackButton";
 import Info from "../../components/Info/Info";
 import InfoPrice from "../../components/Info/InfoPrice";
 import Perform from "../../components/Perform/Perform";
-import Navbar, { onClick } from "../../components/Navbar/Nabar";
+import Navbar from "../../components/Navbar/Nabar";
 import Articles from "../../components/Articles/Articles";
 import Loading from "../../components/Loading/Loading";
 import DeleteButton from "../../components/BackButton/DeleteButton";
@@ -125,7 +125,7 @@ export default function Overview() {
         </main>
       </div>
       <footer className={styles.footer}>
-        <Navbar onClick={onClick} page={router.pathname} />
+        <Navbar page={router.pathname} />
       </footer>
     </div>
   );

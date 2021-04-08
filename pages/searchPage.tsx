@@ -47,9 +47,7 @@ export default function SearchPage() {
       </a>
     </Link>
   ));
-  async function handleClick() {
-    alert("This function will come soon");
-  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -73,7 +71,7 @@ export default function SearchPage() {
         </section>
       </main>
       <div className={styles.footerContainer}>
-        <Navbar onClick={handleClick} page={router.pathname} />
+        <Navbar page={router.pathname} />
       </div>
     </div>
   );

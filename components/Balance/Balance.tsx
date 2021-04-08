@@ -7,6 +7,7 @@ export type BalanceProps = {
 
 function Balance({ sum, returnValue }: BalanceProps) {
   const total = sum.toFixed(2);
+  const value = returnValue.toFixed(2);
   return (
     <div className={styles.container}>
       <div className={styles.head}>Balance</div>
@@ -14,7 +15,7 @@ function Balance({ sum, returnValue }: BalanceProps) {
       <div
         className={returnValue > 0 ? styles.returnValue : styles.returnValueNeg}
       >
-        {returnValue}%
+        {value}%
       </div>
     </div>
   );

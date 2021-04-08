@@ -2,7 +2,7 @@ import { ChangeEventHandler } from "react";
 import styles from "../AddPrice/AddPrice.module.css";
 export type AddPriceProps = {
   onChange: ChangeEventHandler<HTMLInputElement>;
-  value: string;
+  value: number;
 };
 
 function AddPrice({ onChange, value }: AddPriceProps) {
