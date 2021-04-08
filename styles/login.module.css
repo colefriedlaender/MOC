@@ -3,19 +3,13 @@
   background-color: var(--background-color);
   display: grid;
   height: 100vh;
-  grid-template-rows: 15% 1fr 10%;
+  grid-template-rows: 35% 1fr;
 }
 
 .header {
+  padding-top: 15%;
+  align-self: center;
   justify-self: center;
-  display: grid;
-  grid-template-columns: 10% 1fr;
-  width: 90%;
-  height: 100%;
-  padding-top: 1em;
-  align-items: center;
-  justify-items: center;
-  padding-right: 10%;
 }
 .topic {
   width: 50%;
@@ -23,13 +17,17 @@
   align-self: center;
 }
 .main {
+  padding-top: 15%;
   justify-self: center;
   display: grid;
   width: 90%;
-  height: 100%;
+  height: 60%;
   row-gap: 5%;
 }
 .loading {
   align-self: center;
   justify-content: center;
+}
+.form {
+  row-gap: 5%;
 }

@@ -11,8 +11,8 @@ import Loading from "../../components/Loading/Loading";
 
 export default function Overview() {
   const [info, setInfo] = useState<StockName>(null);
-  const [amount, setAmount] = useState("");
-  const [price, setPrice] = useState("");
+  const [amount, setAmount] = useState<number>(undefined);
+  const [price, setPrice] = useState<number>(undefined);
   const router = useRouter();
   const { id } = router.query;
   function handleClick() {
@@ -37,7 +37,7 @@ export default function Overview() {
       amount: amount,
       price: price,
     });
-    router.push("/");
+    router.push("/portfolio");
   };
 
   return (
@@ -59,13 +59,13 @@ export default function Overview() {
           <section className={styles.addAmount}>
             <AddAmount
               onClick={handleClick}
-              onChange={(e) => setAmount(e.target.value)}
+              onChange={(e) => setAmount(+e.target.value)}
               value={amount}
             />
           </section>
           <section className={styles.addPrice}>
             <AddPrice
-              onChange={(e) => setPrice(e.target.value)}
+              onChange={(e) => setPrice(+e.target.value)}
               value={price}
             />
           </section>
