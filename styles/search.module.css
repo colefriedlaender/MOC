@@ -22,13 +22,16 @@
   justify-self: center;
   align-self: center;
 }
+
 .main {
   justify-self: center;
   align-self: flex-start;
   display: grid;
   grid-template-rows: 25% 1fr;
-  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
   height: 100%;
+  overflow: scroll;
 }
 .footerContainer {
   width: 100vw;
