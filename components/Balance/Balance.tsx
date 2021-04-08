@@ -13,7 +13,7 @@ function Balance({ sum, returnValue }: BalanceProps) {
       <div className={styles.head}>Balance</div>
       <div className={styles.total}>${total}</div>
       <div
-        className={returnValue > 0 ? styles.returnValue : styles.returnValueNeg}
+        className={returnValue < 0 ? styles.returnValueNeg : styles.returnValue}
       >
         {value}%
       </div>
