@@ -23,8 +23,6 @@
   align-self: center;
   justify-self: center;
   display: grid;
-  row-gap: 5%;
-  row-gap: 2%;
   width: 100%;
   padding-right: 5%;
   padding-left: 5%;
@@ -41,4 +39,9 @@
   padding-right: 5%;
   padding-left: 5%;
   width: 100%;
+}
+@media only screen and (max-width: 350px) {
+  .container {
+    grid-template-rows: 20% 60% 1fr;
+  }
 }

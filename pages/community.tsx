@@ -22,7 +22,7 @@ export default function Community() {
       </Head>
       <header className={styles.header}></header>
       <main className={styles.main}>
-        <Lottie options={defaultOptions} height={300} width={350} />
+        <Lottie options={defaultOptions} height={200} width={250} />
       </main>
       <div className={styles.footerContainer}>
         <Navbar page={router.pathname} />

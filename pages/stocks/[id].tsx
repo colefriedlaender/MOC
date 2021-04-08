@@ -54,8 +54,9 @@ export default function Overview() {
   if (!stockAPINews) {
     return <Loading />;
   }
+  const API = stockAPI[0];
   const removeStock = async () => {
-    if (!confirm("DO YOU WANT TO DELTE THE STOCK?")) {
+    if (!confirm(`DO YOU WANT TO DELETE YOUR "${stockAPI[0].name}" STOCK?`)) {
       return;
     }
     await deleteStock({
@@ -65,7 +66,7 @@ export default function Overview() {
     });
     router.push("/");
   };
-  const API = stockAPI[0];
+
   return (
     <div className={styles.container}>
       <Head>

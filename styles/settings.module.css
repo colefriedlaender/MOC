@@ -3,7 +3,7 @@
   background-color: var(--background-color);
   display: grid;
   height: 100vh;
-  grid-template-rows: 15% 1fr 10%;
+  grid-template-rows: 15% 1fr;
 }
 
 .header {
@@ -22,14 +22,16 @@
   justify-self: center;
   align-self: center;
 }
+.login {
+  margin-bottom: 5%;
+}
 .main {
+  overflow: scroll;
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
   justify-self: center;
   display: grid;
-  width: 90%;
+  width: 100%;
   height: 100%;
-  row-gap: 5%;
-}
-.loading {
-  align-self: center;
-  justify-content: center;
 }
