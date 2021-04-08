@@ -8,7 +8,7 @@ export type BackButtonProps = {
 function DeleteButton({ onClick }: BackButtonProps) {
   return (
     <div className={styles.btn}>
-      <img src="/Icons/trash.svg" alt="Delete Button" onClick={onClick} />
+      <img src="/Icons/trashCan.svg" alt="Delete Button" onClick={onClick} />
     </div>
   );
 }
