@@ -14,8 +14,8 @@ import {
 } from "../utils/api";
 import Link from "next/link";
 import Navbar from "../components/Navbar/Nabar";
-import Loading from "../components/Loading/Loading";
 import { useRouter } from "next/dist/client/router";
+import startPortfolio from "./startPortfolio";
 
 const userName = "Cole Friedlaender";
 
@@ -37,10 +37,10 @@ export default function Home() {
     });
   }, []);
   if (!stocksDB) {
-    return <Loading />;
+    return startPortfolio();
   }
   if (!stocksAPI) {
-    return <Loading />;
+    return startPortfolio();
   }
 
   const a1 = stocksAPI;
@@ -66,8 +66,12 @@ export default function Home() {
     total = total + stock[i].amount * stock[i].priceAPI;
   }
   let rate = 0;
+  let sum1 = 0;
+  let sum2 = 0;
   for (let i = 0; i < stock.length; i++) {
-    rate = rate + stock[i].priceAPI - stock[i].price;
+    sum1 = stock[i].priceAPI - stock[i].price;
+    sum2 = sum1 / stock[i].price;
+    rate = rate + sum2 * 100;
   }
 
   return (
