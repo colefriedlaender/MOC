@@ -19,11 +19,6 @@ export default function SearchPage() {
     setId(e.target.value);
   };
   async function handleSubmit(e) {
-    e.preventDefault();
-    if (!confirm("Do you really want to submit?")) {
-      return;
-    }
-    alert(id);
     setId(e.target.value);
   }
   useEffect(() => {
@@ -66,7 +61,7 @@ export default function SearchPage() {
           </form>
           <Headline />
         </div>
-        <section>
+        <section className={styles.scroll}>
           <div>{searchItems}</div>
         </section>
       </main>
