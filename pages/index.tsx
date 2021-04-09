@@ -29,7 +29,7 @@ export default function Welcome() {
         <link rel="icon" href="/Icons/favicon.money.png" />
       </Head>
       <main className={styles.main}>
-        <img src="/Icons/logoBIG.svg" alt="Logo" />
+        <img src="/Icons/logoBig.svg" alt="Logo" />
         <Lottie options={defaultOptions} height={50} width={150} />
       </main>
     </div>
