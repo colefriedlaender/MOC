@@ -64,7 +64,7 @@ export default function Overview() {
       amount: stockDB.amount,
       price: stockDB.price,
     });
-    router.push("/");
+    router.push("/portfolio");
   };
 
   return (
