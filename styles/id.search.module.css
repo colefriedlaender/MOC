@@ -3,7 +3,7 @@
   height: 100vh;
   background-color: var(--background-color);
   display: grid;
-  grid-template-rows: 15% 40% 1fr;
+  grid-template-rows: 15% 50% 1fr;
 }
 
 .header {

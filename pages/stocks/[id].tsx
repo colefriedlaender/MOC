@@ -99,14 +99,14 @@ export default function Overview() {
               content={API.priceAPI}
             />
             <Info
-              firstWord={"Percent"}
-              restOfPhrase={"OF Change"}
+              firstWord={"Change"}
+              restOfPhrase={"in Percent"}
               content={API.change}
             />
           </section>
           <Perform
             head={"Performance"}
-            performanceRate={"4,56"}
+            performanceRate={"2.78"}
             performanceText={
               "Compared to the MSCI World Equity the Stock performs"
             }

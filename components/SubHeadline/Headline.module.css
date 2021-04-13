@@ -5,6 +5,7 @@
   color: var(--main-color);
   padding-right: 25px;
   padding-left: 25px;
+  padding-bottom: 5%;
   align-content: center;
 }
 .subHeader {

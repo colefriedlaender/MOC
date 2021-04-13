@@ -12,7 +12,7 @@ import styles from "../styles/search.module.css";
 import { getStockBySearch, SearchAPI } from "../utils/api";
 export default function SearchPage() {
   const router = useRouter();
-  const [id, setId] = useState("A");
+  const [id, setId] = useState("AA");
   const [stock, setStock] = useState<SearchAPI[]>();
 
   const onChange = (e) => {

@@ -14,7 +14,7 @@ function Loading() {
   return (
     <div className={styles.container}>
       <div className={styles.loading}>
-        <Lottie options={defaultOptions} height={200} width={200} />
+        <Lottie options={defaultOptions} height={100} width={100} />
       </div>
     </div>
   );
