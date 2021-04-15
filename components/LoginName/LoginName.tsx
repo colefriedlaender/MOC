@@ -1,10 +1,10 @@
 import { ChangeEventHandler } from "react";
-import styles from "../LoginEmail/LoginEmail.module.css";
+import styles from "../LoginName/LoginName.module.css";
 export type LoginProps = {
   name: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
 };
-function LoginEmail({ name, onChange }: LoginProps) {
+function LoginName({ name, onChange }: LoginProps) {
   return (
     <div className={styles.container}>
       <div className={styles.topic}>{name}</div>
@@ -12,8 +12,8 @@ function LoginEmail({ name, onChange }: LoginProps) {
         <img src="/Icons/mail.svg" alt="EmailIcon" />
         <input
           className={styles.input}
-          type="email"
-          placeholder="colefriedlaender@gmail.com"
+          type="text"
+          placeholder="Cole Friedlaender"
           onChange={onChange}
         ></input>
       </div>
@@ -21,4 +21,4 @@ function LoginEmail({ name, onChange }: LoginProps) {
   );
 }
 
-export default LoginEmail;
+export default LoginName;
